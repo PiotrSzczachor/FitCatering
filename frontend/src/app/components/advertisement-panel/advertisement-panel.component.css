@@ -1,0 +1,99 @@
+div.advertisement-panel-container{
+    width: 100%;
+    height: 800px;
+    background-image: url("../../../assets/background2.jpg");
+    background-size: cover;
+    position: relative;
+    top: -100px;
+    z-index: -1;
+    overflow: hidden;
+    margin: 0;
+    pointer-events: none;
+}
+
+div.sale{
+    height: 200px;
+    width: 600px;
+    border: 2px solid rgb(34, 34, 71);
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    rotate: -5deg;
+    padding: 20px;
+}
+
+div.top-sale, div.bottom-sale{
+    height: 100px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 80px;
+}
+
+div.top-sale{
+    background-color: rgb(34, 34, 71);
+}
+
+div.bottom-sale{
+    background-color: rgb(237, 138, 49);
+}
+
+div.company-description{
+    background-color: white;
+    height: 500px;
+    width: 800px;
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+p.heading, span.collored-words{
+    font-size: 70px;
+    line-height: 70px;
+    margin: 10px;
+    color: rgb(34, 34, 71);
+    font-family: "Sofia", sans-serif;
+}
+
+span.collored-words{
+    color: rgb(237, 138, 49);
+}
+
+p.description-text{
+    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "Sofia", sans-serif;
+}
+
+div.button-container{
+    display: flex;
+    justify-content: center;
+    font-family: "Sofia", sans-serif;
+}
+
+button.check-out-diets-button{
+    background-color: rgb(237, 138, 49);
+    color: rgb(34, 34, 71);
+    font-family: "Sofia", sans-serif;
+    width: 150px;
+    font-size: 20px;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+button.check-out-diets-button:hover{
+    cursor: pointer;
+    background-color: rgb(34, 34, 71);
+    color: rgb(237, 138, 49);
+    transition: 0.7s;
+}

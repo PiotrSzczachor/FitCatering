@@ -1,0 +1,11 @@
+<div class="menu-panel-content">
+    <p class="menu-heading">Menu</p>
+    <div class="menu-cards-container">
+        <app-menu-dish-card *ngFor="let dish of dishes" 
+        [imgUrl]="dish.imgUrl" 
+        [name]="dish.name"
+        [cuisine]="dish.cuisine"
+        [type]="dish.type"
+        [price]="dish.price"></app-menu-dish-card>
+    </div>
+</div>

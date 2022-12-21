@@ -1,0 +1,21 @@
+<div [ngClass]="this.isScrolled ? 'sticky-container' : 'container'">
+    <div class="left-section">
+        <div class="logo-container">
+            <img src="../../assets/logo.png" alt="" class="logo-img">
+        </div>
+        <div class="nav-menu-buttons">
+            <div class="nav-button" (click)="mainPageButtonClick()">Main page</div>
+            <div class="nav-button" (click)="dietsButtonClick()">Diets</div>
+            <div class="nav-button">Menu</div>
+            <div class="nav-button">Shipping zone</div>
+            <div class="nav-button">Contact</div>
+            <div class="nav-button">Client panel</div>
+        </div>
+    </div>
+    <div class="right-section">
+        <button class="social-media-button facebook-button"><i class="fa fa-facebook socials"></i></button>
+        <button class="social-media-button ig-button"><i class="fa fa-instagram socials"></i></button>
+        <button class="basket-button" (click)="openShoppingCart()"><i class="fa fa-shopping-basket"></i>Order</button>
+        <div class="products-counter" [ngStyle]="{'visibility': checkOutService.productsNumber > 0 ? 'visible' : 'hidden'}">{{checkOutService.productsNumber}}</div>
+    </div>
+</div>

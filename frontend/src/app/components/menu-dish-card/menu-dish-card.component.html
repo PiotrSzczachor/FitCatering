@@ -1,0 +1,31 @@
+<div class="menu-dish-card-container">
+    <div class="image-container">
+        <img class="menu-dish-img" [src]="imgUrl" alt="">
+    </div>
+    <div class="menu-dish-card-content">
+        <b><p class="menu-dish-name">{{ name }}</p></b>
+        <div class="menu-dish-info">
+            <div class="menu-dish-info-left">
+                <p class="menu-dish-info-positions">
+                    Cuisine:<br>
+                    Type:<br>
+                    Price:
+                </p>
+            </div>
+            <div class="menu-dish-info-right">
+                <p class="menu-dish-info-values">
+                    {{cuisine}}<br>
+                    {{type}}<br>
+                    {{price}} <i class="fa fa-euro"></i>
+                </p>
+            </div>
+        </div>
+        <div class="menu-dish-card-buttons">
+            <button class="check-menu-dish-button">Check</button>
+            <button class="add-dish-button" (click)="dishAdded()"><i class="fa fa-plus"></i>
+                <div class="dishes-added-counter" *ngIf="dishesAddedCounter != 0">{{dishesAddedCounter}}</div>
+            </button>
+            <button class="delete-dish-button" (click)="dishDeleted()"><i class="fa fa-minus"></i></button>
+        </div>
+    </div>
+</div>

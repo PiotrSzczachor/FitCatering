@@ -1,0 +1,61 @@
+div.diet-card-container{
+    width: 300px;
+    height: 510px;
+    -webkit-box-shadow: 0px 0px 24px 0px rgb(34, 34, 71);
+    -moz-box-shadow: 0px 0px 24px 0px rgb(34, 34, 71);
+    box-shadow: 0px 0px 24px 0px rgb(34, 34, 71);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+div.image-container{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+img.diet-img{
+    width: 100%;
+    height: 100%;
+}
+
+div.diet-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.diet-name{
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    color: rgb(34, 34, 71);
+}
+
+p.diet-description{
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(34, 34, 71);
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button.check-diet-button{
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    border-color: transparent;
+    border-radius: 20px;
+    background-color: rgb(237, 138, 49);
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
+
+button.check-diet-button:hover{
+    background-color: rgb(34, 34, 71);
+    color: rgb(237, 138, 49);
+    transition: 0.7s;
+}

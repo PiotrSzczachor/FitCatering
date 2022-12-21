@@ -1,0 +1,100 @@
+div.menu-dish-card-container{
+    width: 300px;
+    height: 390px;
+    -webkit-box-shadow: 0px 0px 24px 0px rgb(34, 34, 71);
+    -moz-box-shadow: 0px 0px 24px 0px rgb(34, 34, 71);
+    box-shadow: 0px 0px 24px 0px rgb(34, 34, 71);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 4vw;
+}
+
+div.image-container{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+img.menu-dish-img{
+    width: 100%;
+    height: 100%;
+}
+
+div.menu-dish-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.menu-dish-name{
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    color: rgb(34, 34, 71);
+}
+
+div.menu-dish-info{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+p.menu-dish-info-positions, p.menu-dish-info-values{
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(34, 34, 71);
+    text-align: justify;
+}
+
+p.menu-dish-info-values{
+    text-align: right;
+}
+
+button.check-menu-dish-button{
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    border-color: transparent;
+    border-radius: 20px;
+    background-color: rgb(237, 138, 49);
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+button.add-dish-button, button.delete-dish-button{
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    border-color: transparent;
+    border-radius: 20px;
+    background-color: rgb(237, 138, 49);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button.check-menu-dish-button:hover, button.add-dish-button:hover, button.delete-dish-button:hover{
+    background-color: rgb(34, 34, 71);
+    color: rgb(237, 138, 49);
+    transition: 0.7s;
+}
+
+div.dishes-added-counter{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(34, 34, 71);
+    color: rgb(237, 138, 49);
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sofia", sans-serif;
+    left: 10px;
+    bottom: 7px;
+    font-size: 15px;
+}
