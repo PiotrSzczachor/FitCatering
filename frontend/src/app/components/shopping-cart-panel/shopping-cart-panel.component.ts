@@ -11,6 +11,7 @@ export class ShoppingCartPanelComponent implements OnInit {
 
   public productsList: any[] = [];
   public columnsToDisplay = ["Image", "Dish", "Quantity", "Price"];
+  public total: number = 0;
 
   constructor(
     private checkOutService: CheckOutService
@@ -18,6 +19,7 @@ export class ShoppingCartPanelComponent implements OnInit {
 
   ngOnInit(): void {
     this.productsList = this.checkOutService.getProductsList();
+    this.productsList.forEach(product => this.total += product.quantity * product.price);
   }
 
 

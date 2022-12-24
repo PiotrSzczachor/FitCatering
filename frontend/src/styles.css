@@ -2,3 +2,21 @@
 *{margin: 0;}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; height: 140vh;}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ed8a31 #ffffff;
+    }
+    
+    *::-webkit-scrollbar {
+    width: 16px;
+    }
+    
+    *::-webkit-scrollbar-track {
+    background: rgb(34, 34, 71);
+    }
+    
+    *::-webkit-scrollbar-thumb {
+    background-color: #ed8a31;
+    border-radius: 10px;
+    }

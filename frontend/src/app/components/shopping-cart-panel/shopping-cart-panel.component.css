@@ -26,6 +26,10 @@ img.dish-img{
     width: 100%;
 }
 
+div.middle-section{
+    height: 500px;
+}
+
 div.table-container{
     height: auto;
     max-height: 450px;
@@ -39,7 +43,8 @@ table.mat-table {
 div.shopping-cart-footer{
     display: flex;
     width: 1100px;
-    outline: none;
+    justify-content: space-around;
+
 }
 
 input[type=text]{
@@ -58,10 +63,10 @@ input[type=text]:focus {
     border: 3px solid rgb(237, 138, 49);
 }
 
-button.apply-discount-button{
+button.apply-discount-button, button.check-out-button{
     font-family: "Sofia", sans-serif;
     font-size: 20px;
-    height: 46px;
+    height: 45px;
     width: 150px;
     border-radius: 30px;
     border-color: transparent;
@@ -71,9 +76,39 @@ button.apply-discount-button{
     margin-left: 30px;
 }
 
-button.apply-discount-button:hover{
+button.apply-discount-button:hover, button.check-out-button:hover{
     background-color: rgb(34, 34, 71);
     color: rgb(237, 138, 49);
     transition: 0.7s;
 }
 
+div.total-panel{
+    display: flex;
+    align-items: center;
+}
+
+p.total-value{
+    margin: 0;
+    height: 45px;
+    line-height: 45px;
+    font-size: 30px;
+    color: rgb(34, 34, 71);
+}
+
+* {
+scrollbar-width: auto;
+scrollbar-color: #ed8a31 #ffffff;
+}
+
+*::-webkit-scrollbar {
+width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #ed8a31;
+border-radius: 10px;
+}
