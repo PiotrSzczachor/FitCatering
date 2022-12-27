@@ -13,9 +13,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 IServiceCollection serviceCollection = builder.Services.AddEntityFrameworkNpgsql().AddDbContext<FitCateringContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("ConStr")));
-builder.Services.AddScoped<IDishesService, DishesService>();
+builder.Services.AddScoped<IDishesRepository, DishesRepository>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddCors(policyBuilder =>
+    policyBuilder.AddDefaultPolicy(policy =>
+        policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader())
+);
 
 var app = builder.Build();
+
+app.UseCors();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

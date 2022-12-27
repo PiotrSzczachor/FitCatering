@@ -15,6 +15,7 @@ import { MenuDishCardComponent } from './components/menu-dish-card/menu-dish-car
 import { ShoppingCartPanelComponent } from './components/shopping-cart-panel/shopping-cart-panel.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table' 
+import {HttpClientModule} from '@angular/common/Http'
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MatTableModule } from '@angular/material/table'
     SwiperModule,
     MatDialogModule,
     MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

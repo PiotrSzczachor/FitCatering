@@ -1,4 +1,5 @@
-﻿using backend.Entities;
+﻿using backend.DTO;
+using backend.Entities;
 using backend.Interfaces;
 using backend.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -11,31 +12,37 @@ namespace backend.Controllers
     [ApiController]
     public class DishesController : ControllerBase
     {
-        private IDishesService IdishesService;
-        public DishesController(IDishesService _dishesService)
+        private IDishesRepository IdishesRepository;
+        public DishesController(IDishesRepository _dishesRepository)
         {
-            IdishesService = _dishesService;
+            IdishesRepository = _dishesRepository;
         }
         
         // GET: api/<DishesController>
         [HttpGet]
-        public IEnumerable<Dish> Get()
+        public async Task<IEnumerable<Dish>> Get()
         {
-            return IdishesService.getAllDishes();
+            return await IdishesRepository.getAllDishes();
         }
 
         // GET api/<DishesController>/5
         [HttpGet("{id}")]
         public Dish? Get(int id)
         {
-            return IdishesService.getDishById(id);
+            return IdishesRepository.getDishById(id);
         }
 
         // POST api/<DishesController>
         [HttpPost]
         public void Post([FromBody] Dish dish)
         {
-            IdishesService.addDish(dish);
+            IdishesRepository.addDish(dish);
+        }
+
+        [HttpPost("AddMultiple")]
+        public void Post([FromBody] List<DishDTO> dishes)
+        {
+            IdishesRepository.addDishes(dishes);
         }
 
         // PUT api/<DishesController>/5
@@ -48,7 +55,7 @@ namespace backend.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            IdishesService.deleteDish(id);
+            IdishesRepository.deleteDish(id);
         }
     }
 }
