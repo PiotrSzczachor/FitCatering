@@ -2,6 +2,7 @@
 using backend.DTO;
 using backend.Entities;
 using backend.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Services
@@ -23,35 +24,38 @@ namespace backend.Services
             return await db.Dishes.ToListAsync();
         }
 
-        public Dish? getDishById(int id)
+        public async Task<Dish?> getDishById(int id)
         {
-            return db.Dishes.FirstOrDefault(x => x.Id == id);
+            return await db.Dishes.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public void addDish(Dish dish)
+        public async Task<ActionResult<Dish>> addDish(Dish dish)
         {
-            db.Dishes.Add(dish);
-            db.SaveChanges();
+            await db.Dishes.AddAsync(dish);
+            await db.SaveChangesAsync();
+            return dish;
         }
 
-        public void deleteDish(int id)
+        public async Task<ActionResult<Dish?>> deleteDish(int id)
         {
-            var dish = db.Dishes.FirstOrDefault(x => x.Id == id);
+            var dish = await db.Dishes.FirstOrDefaultAsync(x => x.Id == id);
             if (dish != null)
             {
                 db.Dishes.Remove(dish);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
             }
+            return dish;
         }
 
-        public void addDishes(List<DishDTO> dishesDTO)
+        public async Task<ActionResult<List<DishDTO>>> addDishes(List<DishDTO> dishesDTO)
         {
             foreach (var dishDTO in dishesDTO)
             {
                 var dish = mapper.Map<DishDTO, Dish>(dishDTO);
-                db.Dishes.Add(dish);
+                await db.Dishes.AddAsync(dish);
             }
-            db.SaveChanges();
+            await db.SaveChangesAsync();
+            return dishesDTO;
         }
     }
 }

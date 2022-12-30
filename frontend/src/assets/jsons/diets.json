@@ -1,0 +1,37 @@
+[
+    {
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/asian-diet_r62xte.jpg",
+      "dietName": "Asian diet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
+    },
+    {
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/fish-diet_pzddbq.jpg",
+      "dietName": "Fish diet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
+    },
+    {
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/healthy-diet_vnklso.jpg",
+      "dietName": "Healthy diet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
+    },
+    {
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/italian-diet_jzdefg.jpg",
+      "dietName": "Italian diet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
+    },
+    {
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/meat-diet_dqcaxy.jpg",
+      "dietName": "Meat diet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
+    },
+    {
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097112/diets/mexican-diet_ioiu6y.jpg",
+      "dietName": "Mexican diet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
+    },
+    {
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097113/diets/polish-diet_nu6aht.jpg",
+      "dietName": "Polish diet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
+    }
+]

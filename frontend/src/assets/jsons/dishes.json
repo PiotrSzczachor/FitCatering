@@ -1,209 +1,209 @@
 [
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/dc71da59e753ae3b33657fd52bb9cf84",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096959/dishes/apple-pie_fwz17l.jpg",
       "name": "Apple pie",
       "cuisine": "American",
       "type": "Desserts",
       "price": 1.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/1d93828961d377da1a4e27c412f302df",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096960/dishes/bao_tbdz6q.jpg",
       "name": "Bao",
       "cuisine": "Asian",
       "type": "Main dish",
       "price": 4.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/59c2e007696f6c1d26228e843e56d29d",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096959/dishes/bolognese_qv6zuc.jpg",
       "name": "Bolognese",
       "cuisine": "Italian",
       "type": "Main dish",
       "price": 6.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/a3935119b93bfcf2a10473c13eaa75b5",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096960/dishes/bruschetta_s2eaw9.jpg",
       "name": "Bruschetta",
       "cuisine": "Italian",
       "type": "Main dish",
       "price": 2.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/861179f467eb71c9b09d337e8df88c37",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096957/dishes/burito_aqsy5h.webp",
       "name": "Burito",
       "cuisine": "Mexican",
       "type": "Main dish",
       "price": 5.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/de7c661543a8edbc02d26c41fc835710",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096960/dishes/cannoli_e8t2nt.jpg",
       "name": "Cannoli",
       "cuisine": "Italian",
       "type": "Desserts",
       "price": 5.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/d39a7d18db0973649fff886d8317c943",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096960/dishes/carbonara_xskzgk.jpg",
       "name": "Carbonara",
       "cuisine": "Italian",
       "type": "Main dish",
       "price": 6.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/0e3737e2f43a2ce3b198e653de0fece6",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096960/dishes/cheese-cake_pqeexf.jpg",
       "name": "Cheese cake",
       "cuisine": "Italian",
       "type": "Desserts",
       "price": 5.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/f3242078107713bcfd5c4cb1e2021045",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096961/dishes/chicken-soup_fekuwd.jpg",
       "name": "Chicken soup",
       "cuisine": "Polish",
       "type": "Soup",
       "price": 2.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/ee991cb3ab166c7cdce485883346a332",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096961/dishes/chili-con-carne_ur1sh5.jpg",
       "name": "Chili con carne",
       "cuisine": "Mexican",
       "type": "Main dish",
       "price": 8.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/ef4b1878d51d709a51589ecb55d3bdaa",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096961/dishes/coconut-soup_oxyx8m.jpg",
       "name": "Coconut soup",
       "cuisine": "Asian",
       "type": "Soup",
       "price": 6.49
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/a4e8e4113653b6a82f9e533c83b4fdbd",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096961/dishes/croquettes_n7wwjz.jpg",
       "name": "Croquettes",
       "cuisine": "Polish",
       "type": "Main dish",
       "price": 5.49
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/66eae674241f2d828fc2997372ee60b0",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096962/dishes/curry_ca0t4k.jpg",
       "name": "Curry",
       "cuisine": "Asian",
       "type": "Main dish",
       "price": 6.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/15280ab636d679e125bbdc0ab691949e",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096962/dishes/doves_uxgxfa.jpg",
       "name": "Doves",
       "cuisine": "Polish",
       "type": "Main dish",
       "price": 5.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/53270f3adae22d50ee2a45a12cf07940",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096963/dishes/dumplings_rg5mzu.jpg",
       "name": "Dumplings",
       "cuisine": "Polish",
       "type": "Main dish",
       "price": 6.98
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/de74b9ba208685a464ac43042cb30853",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096962/dishes/fondant_wjdkgb.jpg",
       "name": "Fondant",
       "cuisine": "French",
       "type": "Desserts",
       "price": 3.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/75a407e70b270bafdc6576fed945e17c",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096963/dishes/hunters-stew_oewghp.jpg",
       "name": "Hunter's Stew",
       "cuisine": "Polish",
       "type": "Main dish",
       "price": 6.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/ffa4fdd4c0c8d2182bfb2882018069d5",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096963/dishes/ice-cream_evuqfu.jpg",
       "name": "Ice cream",
       "cuisine": "International",
       "type": "Desserts",
       "price": 3.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/a66358e7a77305e87b04aac22efbdd6d",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096965/dishes/lasagne_cm6aa6.jpg",
       "name": "Lasagne",
       "cuisine": "Italian",
       "type": "Main dish",
       "price": 6.39
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/bfdfe287f73b04eef517a16f2847692a",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096963/dishes/nachos-guacamole_d6oun8.jpg",
       "name": "Nachos & guacamole",
       "cuisine": "Mexican",
       "type": "Main dish",
       "price": 2.69
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/8185e561d4494bce477be33aa1dddf85",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096963/dishes/pad-thai_bwbrws.jpg",
       "name": "Pad Thai",
       "cuisine": "Asian",
       "type": "Main dish",
       "price": 9.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/74b5669f6d1025670943730a0bf38e3b",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096964/dishes/pizza_imsgvo.jpg",
       "name": "Pizza",
       "cuisine": "Italian",
       "type": "Main dish",
       "price": 8.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/7411dc3e66e2d300fc4b69719741d906",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096964/dishes/quesadilla_jyytfl.jpg",
       "name": "Quesadilla",
       "cuisine": "Mexican",
       "type": "Main dish",
       "price": 5.29
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/ffdcf3d57b30829c8a50ed6b47961038",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096964/dishes/ramen_si5dha.jpg",
       "name": "Ramen",
       "cuisine": "Asian",
       "type": "Soup",
       "price": 8.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/93c6505ea0f051f2fb6af37e9035b0c7",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096963/dishes/red-borsch_e6gkc3.jpg",
       "name": "Red Borsch",
       "cuisine": "Polish",
       "type": "Soup",
       "price": 3.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/5baa9b79eb9158debc0de6722abf350d",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096963/dishes/white-borsch_cuk0iu.jpg",
       "name": "White Borsch",
       "cuisine": "Polish",
       "type": "Soup",
       "price": 3.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/bb103d90d2ce8bc1097ed2fc88bc7c3a",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096965/dishes/schnitzel_vmra6s.jpg",
       "name": "Schnitzel",
       "cuisine": "Polish",
       "type": "Main dish",
       "price": 7.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/463aab1bcf3b092052b998a24cc52ab6",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096964/dishes/spring-rolls_yzt5uh.jpg",
       "name": "Spring rolls",
       "cuisine": "Asian",
       "type": "Main dish",
       "price": 6.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/fe8dd1fe7bd373b9addfd164030ab29e",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096964/dishes/sushi_jaoc75.jpg",
       "name": "Sushi",
       "cuisine": "Asian",
       "type": "Soup",
       "price": 13.99
     },
     {
-      "imgUrl": "https://asset.cloudinary.com/dfeeslq9i/e6b13ca111c1dd1544b0f9d34ec48628",
+      "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672096965/dishes/taco_nehqjw.jpg",
       "name": "Taco",
       "cuisine": "Mexican",
       "type": "Main dish",

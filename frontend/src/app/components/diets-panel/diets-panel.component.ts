@@ -2,6 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { SwiperModule } from 'swiper/angular';
 import { SwiperComponent } from "swiper/angular";
 import SwiperCore, { Pagination, Navigation } from "swiper";
+import { HttpClient } from '@angular/common/Http';
+import { environment } from 'src/environments/environment';
 SwiperCore.use([Pagination, Navigation]);
 
 @Component({
@@ -12,48 +14,13 @@ SwiperCore.use([Pagination, Navigation]);
 })
 export class DietsPanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
-  ngOnInit(): void {
+  public diets: any[] = [];
+
+  async ngOnInit(): Promise<void> {
+    await this.http.get<any>(environment.apiUrl + "Dishes").subscribe(res => res.forEach((dish: any) => this.diets.push(dish)));
   }
 
-  //mock json
-  dietCards = [
-    {
-      imgUrl: "../../assets/diets-images/asian-diet.jpg",
-      dietName: "Asian diet",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
-    },
-    {
-      imgUrl: "../../assets/diets-images/fish-diet.jpg",
-      dietName: "Fish diet",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
-    },
-    {
-      imgUrl: "../../assets/diets-images/healthy-diet.jpg",
-      dietName: "Healthy diet",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
-    },
-    {
-      imgUrl: "../../assets/diets-images/italian-diet.jpg",
-      dietName: "Italian diet",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
-    },
-    {
-      imgUrl: "../../assets/diets-images/meat-diet.jpg",
-      dietName: "Meat diet",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
-    },
-    {
-      imgUrl: "../../assets/diets-images/mexican-diet.jpg",
-      dietName: "Mexican diet",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
-    },
-    {
-      imgUrl: "../../assets/diets-images/polish-diet.jpg",
-      dietName: "Polish diet",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam."
-    },
-  ]
 
 }

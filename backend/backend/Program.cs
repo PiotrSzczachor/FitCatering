@@ -1,5 +1,6 @@
 using backend.Entities;
 using backend.Interfaces;
+using backend.Repositories;
 using backend.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,7 @@ builder.Services.AddSwaggerGen();
 IServiceCollection serviceCollection = builder.Services.AddEntityFrameworkNpgsql().AddDbContext<FitCateringContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("ConStr")));
 builder.Services.AddScoped<IDishesRepository, DishesRepository>();
+builder.Services.AddScoped<IDietsRepository, DietsRepository>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddCors(policyBuilder =>
     policyBuilder.AddDefaultPolicy(policy =>

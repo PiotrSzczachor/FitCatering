@@ -17,45 +17,40 @@ namespace backend.Controllers
         {
             IdishesRepository = _dishesRepository;
         }
-        
-        // GET: api/<DishesController>
+
         [HttpGet]
-        public async Task<IEnumerable<Dish>> Get()
+        public async Task<IEnumerable<Dish>> GetDishes()
         {
             return await IdishesRepository.getAllDishes();
         }
 
-        // GET api/<DishesController>/5
         [HttpGet("{id}")]
-        public Dish? Get(int id)
+        public async Task<Dish?> GetDish(int id)
         {
-            return IdishesRepository.getDishById(id);
+            return await IdishesRepository.getDishById(id);
         }
 
-        // POST api/<DishesController>
         [HttpPost]
-        public void Post([FromBody] Dish dish)
+        public async Task<ActionResult<Dish>> AddDish([FromBody] Dish dish)
         {
-            IdishesRepository.addDish(dish);
+            return await IdishesRepository.addDish(dish);
         }
 
         [HttpPost("AddMultiple")]
-        public void Post([FromBody] List<DishDTO> dishes)
+        public async Task<ActionResult<List<DishDTO>>> AddDishes([FromBody] List<DishDTO> dishes)
         {
-            IdishesRepository.addDishes(dishes);
+            return await IdishesRepository.addDishes(dishes);
         }
 
-        // PUT api/<DishesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void UpdateDish(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<DishesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult<Dish?>> DeleteDish(int id)
         {
-            IdishesRepository.deleteDish(id);
+            return await IdishesRepository.deleteDish(id);
         }
     }
 }

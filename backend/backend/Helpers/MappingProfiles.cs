@@ -9,6 +9,7 @@ namespace backend.Helpers
         public MappingProfiles()
         {
             CreateMap<DishDTO, Dish>();
+            CreateMap<DietDTO, Diet>();
         }
     }
 }
