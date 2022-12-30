@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/Http';
 import { environment } from '../../../environments/environment'
+import { IDish } from 'src/app/Interfaces/IDish';
 
 
 @Component({
@@ -12,11 +13,11 @@ export class MenuPanelComponent implements OnInit {
 
   constructor(private http : HttpClient) { }
 
-  public dishes: any[] = [];
+  public dishes: IDish[] = [];
 
 
   async ngOnInit(): Promise<void> {
-    await this.http.get<any>(environment.apiUrl + "Dishes").subscribe(res => res.forEach((dish: any) => this.dishes.push(dish)));
+    await this.http.get<IDish[]>(environment.apiUrl + "Dishes").subscribe(res => res.forEach((dish: any) => this.dishes.push(dish)));
   }
 
 }

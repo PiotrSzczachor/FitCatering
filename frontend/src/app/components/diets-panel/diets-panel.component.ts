@@ -4,6 +4,7 @@ import { SwiperComponent } from "swiper/angular";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 import { HttpClient } from '@angular/common/Http';
 import { environment } from 'src/environments/environment';
+import { IDiet } from 'src/app/Interfaces/IDiet';
 SwiperCore.use([Pagination, Navigation]);
 
 @Component({
@@ -16,10 +17,10 @@ export class DietsPanelComponent implements OnInit {
 
   constructor(private http : HttpClient) { }
 
-  public diets: any[] = [];
+  public diets: IDiet[] = [];
 
   async ngOnInit(): Promise<void> {
-    await this.http.get<any>(environment.apiUrl + "Dishes").subscribe(res => res.forEach((dish: any) => this.diets.push(dish)));
+    await this.http.get<IDiet[]>(environment.apiUrl + "Diets").subscribe(res => res.forEach((diet: IDiet) => this.diets.push(diet)));
   }
 
 

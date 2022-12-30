@@ -17,7 +17,7 @@ export class MenuDishCardComponent implements OnInit {
   @Input() name: string | undefined;
   @Input() cuisine: string | undefined;
   @Input() type: string | undefined;
-  @Input() price: string | undefined;
+  @Input() price: number | undefined;
   
   dishesAddedCounter: number = 0;
 
