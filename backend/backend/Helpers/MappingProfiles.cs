@@ -10,6 +10,7 @@ namespace backend.Helpers
         {
             CreateMap<DishDTO, Dish>();
             CreateMap<DietDTO, Diet>();
+            CreateMap<DiscountDTO, Discount>();
         }
     }
 }

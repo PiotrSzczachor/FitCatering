@@ -27,12 +27,13 @@
     
     <div class="shopping-cart-footer">
         <div class="discount-code-panel">
-            <input type="text" class="discount-code-input" placeholder="Discount code" tabindex="-1">
-            <button class="apply-discount-button">Apply discount</button>
+            <input type="text" class="discount-code-input" placeholder="Discount code" tabindex="-1" (keyup)="onKey($event)">
+            <button class="apply-discount-button" (click)="applyDiscount()">Apply discount</button>
         </div>
         <div class="total-panel">
             <p class="total-value">Total: {{this.total.toFixed(2)}} <i class="fa fa-euro"></i></p>
             <button class="check-out-button">Check out</button>
         </div>
     </div>
+    <p class="discount-error" *ngIf="wrongDiscountCode">Entered discount code does not exists</p>
 </div>

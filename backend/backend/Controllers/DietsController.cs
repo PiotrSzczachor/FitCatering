@@ -23,9 +23,9 @@ namespace backend.Controllers
         }
 
         [HttpGet("{id}")]
-        public Task<Diet?> GetDiet(int id)
+        public async Task<Diet?> GetDiet(int id)
         {
-            return IdietsRepository.getDietById(id);
+            return await IdietsRepository.getDietById(id);
         }
 
         [HttpPost]

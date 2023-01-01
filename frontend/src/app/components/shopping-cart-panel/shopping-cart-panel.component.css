@@ -112,3 +112,10 @@ background: white;
 background-color: #ed8a31;
 border-radius: 10px;
 }
+
+p.discount-error{
+    color: red;
+    position: relative;
+    left: -29.2%;
+    bottom: -1%;
+}

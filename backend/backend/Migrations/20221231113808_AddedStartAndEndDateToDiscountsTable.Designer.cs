@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using backend.Entities;
@@ -11,9 +12,11 @@ using backend.Entities;
 namespace backend.Migrations
 {
     [DbContext(typeof(FitCateringContext))]
-    partial class FitCateringContextModelSnapshot : ModelSnapshot
+    [Migration("20221231113808_AddedStartAndEndDateToDiscountsTable")]
+    partial class AddedStartAndEndDateToDiscountsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,14 +67,14 @@ namespace backend.Migrations
                     b.Property<string>("Code")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
 
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
 
-                    b.Property<int>("Value")
-                        .HasColumnType("integer");
+                    b.Property<string>("Value")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
