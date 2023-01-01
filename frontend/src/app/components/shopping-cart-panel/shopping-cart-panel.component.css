@@ -119,3 +119,23 @@ p.discount-error{
     left: -29.2%;
     bottom: -1%;
 }
+
+p.discount-applied{
+    color: green;
+    position: relative;
+    left: -29.2%;
+    bottom: -1%;
+}
+
+button.after-discount-used{
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    height: 45px;
+    width: 150px;
+    border-radius: 30px;
+    border-color: transparent;
+    background-color: rgb(156, 156, 156);
+    color: white;
+    pointer-events: none;
+    margin-left: 30px;
+}

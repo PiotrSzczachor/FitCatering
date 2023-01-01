@@ -42,7 +42,7 @@ export class ShoppingCartPanelComponent implements OnInit {
   applyDiscount(): void{
     this.discounts.forEach(discount => {
       if(discount.code === this.enteredCode && this.checkIfDiscountIsActive(discount)){
-        this.total *= discount.value/100;
+        this.total *= (100-discount.value)/100;
         this.discountUsed = true;
         this.wrongDiscountCode = false;
       }
@@ -54,7 +54,9 @@ export class ShoppingCartPanelComponent implements OnInit {
 
   checkIfDiscountIsActive(discount: IDiscount): boolean{
     const today = new Date();
-    return (today >= discount.startDate && today <= discount.endDate);
+    const start = new Date(discount.startDate);
+    const end = new Date(discount.endDate);
+    return (today >= start && today <= end);
   }
 
 
