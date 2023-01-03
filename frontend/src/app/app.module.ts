@@ -15,7 +15,9 @@ import { MenuDishCardComponent } from './components/menu-dish-card/menu-dish-car
 import { ShoppingCartPanelComponent } from './components/shopping-cart-panel/shopping-cart-panel.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table' 
-import {HttpClientModule} from '@angular/common/Http'
+import {HttpClientModule} from '@angular/common/Http';
+import { DietViewerComponent } from './components/diet-viewer/diet-viewer.component';
+import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.component'
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import {HttpClientModule} from '@angular/common/Http'
     MenuPanelComponent,
     MenuDishCardComponent,
     ShoppingCartPanelComponent,
+    DietViewerComponent,
+    MenuViewerComponent,
   ],
   imports: [
     BrowserModule,

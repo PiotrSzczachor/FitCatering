@@ -1,18 +1,17 @@
-<div class="diets-panel-content">
+<div class="diets-panel-content" id="diets-content">
     <p class="diets-heading">Diets</p>
     <div class="diet-cards-container">
         <swiper
+        [autoplay]="{
+          delay: 2500,
+          disableOnInteraction: true
+        }"
         [slidesPerView]="3"
         [spaceBetween]="30"
-        [slidesPerGroup]="3"
         [loop]="true"
         [loopFillGroupWithBlank]="true"
-        [pagination]="{
-          clickable: true
-        }"
         [navigation]="true"
-        class="mySwiper"
-      >
+        class="mySwiper">
         <ng-template swiperSlide *ngFor="let card of diets"><app-diet-type-card [imgUrl]="card.imgUrl" [dietName]="card.name" [description]="card.description"></app-diet-type-card></ng-template>
       </swiper>
     </div>

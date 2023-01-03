@@ -3,6 +3,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { CheckOutService } from 'src/app/services/check-out.service';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { ShoppingCartPanelComponent } from '../shopping-cart-panel/shopping-cart-panel.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-toolbar',
@@ -15,6 +16,7 @@ export class TopToolbarComponent implements OnInit {
     private scroller: ViewportScroller,
     public checkOutService: CheckOutService,
     private dialog: MatDialog,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -27,11 +29,15 @@ export class TopToolbarComponent implements OnInit {
   }
 
   dietsButtonClick(){
-    this.scroller.scrollToAnchor("diets-panel");
+    this.scroller.scrollToAnchor("diets-content");
   }
   
   mainPageButtonClick(){
-    this.scroller.scrollToAnchor("main-page");
+    this.router.navigate(['home']);
+  }
+
+  menuButtonClick(){
+    this.router.navigate(['menu']);
   }
 
   openShoppingCart(){
