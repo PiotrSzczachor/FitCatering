@@ -12,5 +12,6 @@ namespace backend.Entities
         public int NumberOfCalories { get; set; }
         public bool IsVege { get; set; }
         public double Price { get; set; }
+        public List<string>? PhotosUrls { get; set; }
     }
 }

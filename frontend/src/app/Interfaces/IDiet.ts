@@ -6,4 +6,5 @@ export interface IDiet{
     numberOfCalories: number;
     isVege: boolean;
     price: number;
+    photosUrls: string[];
 }
