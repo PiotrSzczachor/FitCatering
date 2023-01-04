@@ -1,15 +1,14 @@
+<app-top-toolbar></app-top-toolbar>
 <div class="diet-info-container">
     <div class="diet-photos-gallery">
         <swiper
             [slidesPerView]="1"
-            [spaceBetween]="30"
             [loop]="true"
-            [pagination]="{
-            clickable: true
-            }"
-            [navigation]="true"
             class="mySwiper">
-            
+            <ng-template swiperSlide *ngFor="let photo of photos"><div class="img-container"><img [src]="photo" alt=""></div></ng-template>
         </swiper>`
+    </div>
+    <div class="diet-info-content-container">
+
     </div>
 </div>

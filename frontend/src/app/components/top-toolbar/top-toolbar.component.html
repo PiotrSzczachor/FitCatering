@@ -1,4 +1,4 @@
-<div [ngClass]="this.isScrolled ? 'sticky-container' : 'container'">
+<div [ngClass]="(this.isScrolled && this.isMainPage) || !this.isMainPage ? 'sticky-container' : 'container'">
     <div class="left-section">
         <div class="logo-container">
             <img src="../../assets/logo.png" alt="" class="logo-img">

@@ -1,58 +1,93 @@
 [
     {
       "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/asian-diet_r62xte.jpg",
-      "dietName": "Asian diet",
+      "name": "Asian diet",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam.",
       "numberOfCalories": 2400,
       "isVege": false,
-      "price": 400
+      "price": 400,
+      "photosUrls": [
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/asian-diet_r62xte.jpg", 
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782956/diets/asian-diet2_alqf5h.jpg",
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782955/diets/asian-diet3_okdehw.png"
+      ]
     },
     {
       "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/fish-diet_pzddbq.jpg",
-      "dietName": "Fish diet",
+      "name": "Fish diet",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam.",
       "numberOfCalories": 2000,
       "isVege": true,
-      "price": 370
+      "price": 370,
+      "photosUrls": [
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/fish-diet_pzddbq.jpg", 
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782955/diets/fish-diet2_dh5xv4.jpg",
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782955/diets/fish-diet3_ofm0lb.jpg"
+      ]
     },
     {
       "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/healthy-diet_vnklso.jpg",
-      "dietName": "Healthy diet",
+      "name": "Healthy diet",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam.",
       "numberOfCalories": 1700,
       "isVege": true,
-      "price": 350
+      "price": 350,
+      "photosUrls": [
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/healthy-diet_vnklso.jpg", 
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782955/diets/healthy-diet2_zu3sef.jpg",
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782955/diets/healthy-diet3_lwbggc.jpg"
+      ]
     },
     {
       "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/italian-diet_jzdefg.jpg",
-      "dietName": "Italian diet",
+      "name": "Italian diet",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam.",
       "numberOfCalories": 2200,
       "isVege": false,
-      "price": 350
+      "price": 350,
+      "photosUrls": [
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/italian-diet_jzdefg.jpg", 
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672783585/diets/italian-diet2_oiqhzf.jpg",
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672783585/diets/italian-diet3_kwqqqn.jpg"
+      ]
     },
     {
       "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/meat-diet_dqcaxy.jpg",
-      "dietName": "Meat diet",
+      "name": "Meat diet",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam.",
       "numberOfCalories": 2700,
       "isVege": false,
-      "price": 410
+      "price": 410,
+      "photosUrls": [
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097111/diets/meat-diet_dqcaxy.jpg", 
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782955/diets/meat-diet2_ysrho5.jpg",
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782954/diets/meat-diet3_tigkcd.jpg"
+      ]
     },
     {
       "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097112/diets/mexican-diet_ioiu6y.jpg",
-      "dietName": "Mexican diet",
+      "name": "Mexican diet",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam.",
       "numberOfCalories": 2300,
       "isVege": false,
-      "price": 390
+      "price": 390,
+      "photosUrls": [
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097112/diets/mexican-diet_ioiu6y.jpg", 
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672783585/diets/mexican-diet2_c7cyig.jpg",
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672783585/diets/mexican-diet3_sxtzpa.jpg"
+      ]
     },
     {
       "imgUrl": "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097113/diets/polish-diet_nu6aht.jpg",
-      "dietName": "Polish diet",
+      "name": "Polish diet",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis beatae hic maxime repellat itaque porro ipsa explicabo consectetur a aperiam ipsam, mollitia quae, facilis aut ipsum dolore voluptas magnam quaerat excepturi quibusdam.",
       "numberOfCalories": 3000,
       "isVege": false,
-      "price": 360
+      "price": 360,
+      "photosUrls": [
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672097113/diets/polish-diet_nu6aht.jpg", 
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782954/diets/polish-diet2_nzztby.jpg",
+        "https://res.cloudinary.com/dfeeslq9i/image/upload/v1672782954/diets/polish-diet3_zavnpf.jpg"
+      ]
     }
 ]

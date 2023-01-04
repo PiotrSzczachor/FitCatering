@@ -6,7 +6,7 @@ import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.compon
 
 const routes: Routes = [
   {path: 'home', component: MainViewerComponent},
-  {path: "diet/:id", component: DietViewerComponent},
+  {path: "diets/:id", component: DietViewerComponent},
   {path: "menu", component: MenuViewerComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];

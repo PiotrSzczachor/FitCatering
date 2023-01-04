@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { CheckOutService } from 'src/app/services/check-out.service';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { ShoppingCartPanelComponent } from '../shopping-cart-panel/shopping-cart-panel.component';
@@ -23,6 +23,7 @@ export class TopToolbarComponent implements OnInit {
   }
 
   isScrolled : boolean = false;
+  @Input() isMainPage: boolean = false;
 
   @HostListener("window:scroll") onScroll(){
     this.isScrolled = window.scrollY >= 100 ? true : false;
