@@ -27,7 +27,6 @@ div.menu-dish-card-content{
 }
 
 p.menu-dish-name{
-    font-family: "Sofia", sans-serif;
     font-size: 30px;
     line-height: 30px;
     margin-top: 20px;
@@ -42,7 +41,6 @@ div.menu-dish-info{
 }
 
 p.menu-dish-info-positions, p.menu-dish-info-values{
-    font-family: "Sofia", sans-serif;
     font-size: 20px;
     line-height: 20px;
     color: rgb(34, 34, 71);
@@ -54,7 +52,6 @@ p.menu-dish-info-values{
 }
 
 button.check-menu-dish-button{
-    font-family: "Sofia", sans-serif;
     font-size: 20px;
     border-color: transparent;
     border-radius: 20px;
@@ -63,10 +60,10 @@ button.check-menu-dish-button{
     height: 40px;
     cursor: pointer;
     margin-right: 20px;
+    font-family: "Sofia", sans-serif;
 }
 
 button.add-dish-button, button.delete-dish-button{
-    font-family: "Sofia", sans-serif;
     font-size: 20px;
     border-color: transparent;
     border-radius: 20px;
@@ -75,6 +72,7 @@ button.add-dish-button, button.delete-dish-button{
     height: 40px;
     cursor: pointer;
     margin-left: 5px;
+    font-family: "Sofia", sans-serif
 }
 
 button.check-menu-dish-button:hover, button.add-dish-button:hover, button.delete-dish-button:hover{
@@ -93,7 +91,6 @@ div.dishes-added-counter{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Sofia", sans-serif;
     left: 10px;
     bottom: 7px;
     font-size: 15px;

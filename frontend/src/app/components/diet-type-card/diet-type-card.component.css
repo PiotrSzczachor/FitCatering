@@ -26,7 +26,6 @@ div.diet-card-content{
 }
 
 p.diet-name{
-    font-family: "Sofia", sans-serif;
     font-size: 30px;
     line-height: 30px;
     margin-top: 20px;
@@ -34,7 +33,6 @@ p.diet-name{
 }
 
 p.diet-description{
-    font-family: "Sofia", sans-serif;
     font-size: 20px;
     line-height: 20px;
     color: rgb(34, 34, 71);
@@ -44,7 +42,6 @@ p.diet-description{
 }
 
 button.check-diet-button{
-    font-family: "Sofia", sans-serif;
     font-size: 20px;
     border-color: transparent;
     border-radius: 20px;
@@ -52,10 +49,21 @@ button.check-diet-button{
     width: 120px;
     height: 40px;
     cursor: pointer;
+    font-family: "Sofia", sans-serif;
 }
 
 button.check-diet-button:hover{
     background-color: rgb(34, 34, 71);
     color: rgb(237, 138, 49);
     transition: 0.7s;
+}
+
+div.diet-card-heading{
+    display: flex;
+}
+
+i.vege-icon{
+    height: 50%;
+    margin-top: 5%;
+    color: rgb(0, 184, 0);
 }

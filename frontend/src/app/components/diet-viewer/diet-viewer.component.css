@@ -31,7 +31,7 @@ img{
     object-fit: cover;
 }
 
-.swiper {
+.mySwiper {
     width: 100%;
     height: 100%;
 }
@@ -54,4 +54,76 @@ img{
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+}
+
+div.diet-info-content-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.heading{
+    display: flex;
+    margin-top: 3vh;
+}
+
+p.diet-name-heading{
+    font-size: 3vw;
+    line-height: 3vw;
+    color: rgb(237, 138, 49);
+    margin-top: 2%;
+}
+
+p.diet-description{
+    font-size: 1vw;
+    line-height: 1vw;
+}
+
+div.description-content{
+    width: 90%;
+    text-align: justify;
+    margin-top: 10%;
+}
+
+i.vege-icon{
+    color: rgb(0, 184, 0);
+    font-size: 1vw;
+}
+
+div.diet-parameters{
+    font-size: 1vw;
+    width: 90%;
+    margin-top: 10%;
+}
+
+i.check{
+    color: rgb(0, 184, 0);;
+}
+
+i.cross{
+    color: red;
+}
+
+div.buy-diet-button-container{
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+}
+
+button.buy-diet-button{
+    font-size: 1vw;
+    line-height: 1vw;
+    border-color: transparent;
+    border-radius: 20px;
+    background-color: rgb(237, 138, 49);
+    height: 2vw;
+    cursor: pointer;
+    margin-top: 5%;
+    font-family: "Sofia", sans-serif
+}
+
+button.buy-diet-button:hover{
+    background-color: rgb(34, 34, 71);
+    color: rgb(237, 138, 49);
+    transition: 0.7s;
 }

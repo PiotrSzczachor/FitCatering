@@ -15,12 +15,11 @@ div.diets-panel-content{
 
 p.diets-heading{
     font-size: 60px;
-    font-family: "Sofia", sans-serif;
     color: rgb(237, 138, 49);
     margin-bottom: -150px;
 }
 
-.swiper {
+.myDietSwiper {
     width: 80vw;
     height: 120%;
 }

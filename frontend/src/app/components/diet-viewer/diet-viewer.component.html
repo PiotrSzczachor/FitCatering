@@ -4,11 +4,30 @@
         <swiper
             [slidesPerView]="1"
             [loop]="true"
+            [autoplay]="{
+                delay: 2500
+              }"
             class="mySwiper">
-            <ng-template swiperSlide *ngFor="let photo of photos"><div class="img-container"><img [src]="photo" alt=""></div></ng-template>
+            <ng-template swiperSlide *ngFor="let photo of (diet$|async)?.photosUrls"><div class="img-container"><img [src]="photo" alt=""></div></ng-template>
         </swiper>`
     </div>
     <div class="diet-info-content-container">
-
+        <div class="heading">
+            <p class="diet-name-heading">{{(diet$|async)?.name}}</p>
+            <i *ngIf="(diet$|async)?.isVege" class="fa fa-leaf vege-icon"></i>
+        </div>
+        <div class="description-content">
+            <p class="diet-description">
+                {{(diet$|async)?.description}}
+            </p>
+        </div>
+        <div class="diet-parameters">
+            <p class="diet-price">Price: {{(diet$|async)?.price}} <i class="fa fa-euro"></i></p>
+            <p class="calories">Calories: {{(diet$|async)?.numberOfCalories}} kcal</p>
+            <p class="is-vege">Vegetarian: <i [ngClass]="(diet$|async)?.isVege ? 'fa fa-check check' : 'fa fa-times cross'"></i></p>
+        </div>
+        <div class="buy-diet-button-container">
+            <button class="buy-diet-button">Buy diet</button>
+        </div>
     </div>
 </div>

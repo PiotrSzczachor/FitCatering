@@ -14,10 +14,11 @@ import { MenuPanelComponent } from './components/menu-panel/menu-panel.component
 import { MenuDishCardComponent } from './components/menu-dish-card/menu-dish-card.component';
 import { ShoppingCartPanelComponent } from './components/shopping-cart-panel/shopping-cart-panel.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { MatTableModule } from '@angular/material/table' 
+import { MatTableModule } from '@angular/material/table' ;
 import {HttpClientModule} from '@angular/common/Http';
 import { DietViewerComponent } from './components/diet-viewer/diet-viewer.component';
-import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.component'
+import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.component';
+import { MatIconModule } from '@angular/material/icon' ;
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.compon
     SwiperModule,
     MatDialogModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

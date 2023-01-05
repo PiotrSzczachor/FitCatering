@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/Http';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { IDiet } from 'src/app/Interfaces/IDiet';
 import { environment } from 'src/environments/environment';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
@@ -14,8 +15,7 @@ SwiperCore.use([ Navigation, Pagination, Autoplay]);
 })
 export class DietViewerComponent implements OnInit {
 
-  public photos: string[] = [];
-  public diet: IDiet | undefined;
+  public diet$: Observable<IDiet> | undefined;
 
   constructor(
       private http: HttpClient,
@@ -24,15 +24,9 @@ export class DietViewerComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     const dietId = this.route.snapshot.paramMap.get('id');
-    if(dietId) await this.getDiet(dietId);
-    console.log(this.photos);
-  }
-
-  private async getDiet(id: string){
-    await this.http.get<IDiet>(environment.apiUrl + "Diets/" + id).subscribe(res => {
-      this.diet = res;
-      this.diet.photosUrls.forEach(photo => this.photos.push(photo))
-    });
+    if(dietId){
+      this.diet$ = await this.http.get<IDiet>(environment.apiUrl + "Diets/" + dietId);
+    }
   }
 
 }

@@ -11,8 +11,8 @@
         [loop]="true"
         [loopFillGroupWithBlank]="true"
         [navigation]="true"
-        class="mySwiper">
-        <ng-template swiperSlide *ngFor="let card of diets"><app-diet-type-card [id]="card.id" [imgUrl]="card.imgUrl" [dietName]="card.name" [description]="card.description"></app-diet-type-card></ng-template>
+        class="myDietSwiper">
+        <ng-template swiperSlide *ngFor="let card of diets"><app-diet-type-card [id]="card.id" [imgUrl]="card.imgUrl" [dietName]="card.name" [description]="card.description" [isVege]="card.isVege"></app-diet-type-card></ng-template>
       </swiper>
     </div>
 </div>

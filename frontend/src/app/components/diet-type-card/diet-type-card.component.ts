@@ -17,6 +17,7 @@ export class DietTypeCardComponent implements OnInit {
   @Input() imgUrl: string | undefined;
   @Input() dietName: string | undefined;
   @Input() description: string | undefined;
+  @Input() isVege: boolean | undefined;
 
   public routeToDietViewer(){
     this.router.navigate(['diets/' + this.id]);

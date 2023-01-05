@@ -3,7 +3,10 @@
         <img class="diet-img" [src]="imgUrl" alt="">
     </div>
     <div class="diet-card-content">
-        <b><p class="diet-name"> {{dietName}} </p></b>
+        <div class="diet-card-heading">
+            <b><p class="diet-name"> {{dietName}} </p></b>
+            <i *ngIf="isVege" class="fa fa-leaf vege-icon"></i>
+        </div>
         <p class="diet-description"> {{description}} </p>
         <button class="check-diet-button" (click)="routeToDietViewer()">
             Check

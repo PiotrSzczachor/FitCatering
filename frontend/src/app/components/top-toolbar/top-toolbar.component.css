@@ -35,7 +35,6 @@ img.logo-img{
 }
 
 div.nav-button{
-    font-family: "Sofia", sans-serif;
     display: flex;
     width: 7vw;
     color: white;
@@ -93,8 +92,8 @@ button.basket-button{
     border-radius: 100px;
     color: white;
     font-size: 20px;
-    font-family: "Sofia", sans-serif;
     transition: 0.7s;
+    font-family: "Sofia", sans-serif;
 }
 
 button.basket-button:hover{
@@ -113,7 +112,6 @@ div.products-counter{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Sofia", sans-serif;
     left: -20px;
     bottom: -25px;
     font-size: 15px;
