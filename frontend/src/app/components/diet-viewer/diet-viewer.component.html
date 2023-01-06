@@ -2,14 +2,19 @@
 <div class="diet-info-container">
     <div class="diet-photos-gallery">
         <swiper
-            [slidesPerView]="1"
             [loop]="true"
+            [loopedSlides]="2"
             [autoplay]="{
-                delay: 2500
-              }"
+                delay: 2000,
+                disableOnInteraction: false
+            }"
+            [preloadImages]="true"
+            [pagination]="{
+                clickable: true
+            }"
             class="mySwiper">
             <ng-template swiperSlide *ngFor="let photo of (diet$|async)?.photosUrls"><div class="img-container"><img [src]="photo" alt=""></div></ng-template>
-        </swiper>`
+        </swiper>
     </div>
     <div class="diet-info-content-container">
         <div class="heading">

@@ -10,6 +10,7 @@
         [spaceBetween]="30"
         [loop]="true"
         [loopFillGroupWithBlank]="true"
+        [loopedSlides]="3"
         [navigation]="true"
         class="myDietSwiper">
         <ng-template swiperSlide *ngFor="let card of diets"><app-diet-type-card [id]="card.id" [imgUrl]="card.imgUrl" [dietName]="card.name" [description]="card.description" [isVege]="card.isVege"></app-diet-type-card></ng-template>
