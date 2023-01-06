@@ -18,7 +18,8 @@ import { MatTableModule } from '@angular/material/table' ;
 import {HttpClientModule} from '@angular/common/Http';
 import { DietViewerComponent } from './components/diet-viewer/diet-viewer.component';
 import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.component';
-import { MatIconModule } from '@angular/material/icon' ;
+import { MatIconModule } from '@angular/material/icon';
+import { CommentsPanelComponent } from './components/comments-panel/comments-panel.component' ;
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatIconModule } from '@angular/material/icon' ;
     ShoppingCartPanelComponent,
     DietViewerComponent,
     MenuViewerComponent,
+    CommentsPanelComponent,
   ],
   imports: [
     BrowserModule,
