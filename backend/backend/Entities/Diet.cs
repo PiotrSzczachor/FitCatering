@@ -13,5 +13,6 @@ namespace backend.Entities
         public bool IsVege { get; set; }
         public double Price { get; set; }
         public List<string>? PhotosUrls { get; set; }
+        public ICollection<Comment>? Comments { get; set; }
     }
 }
