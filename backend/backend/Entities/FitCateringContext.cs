@@ -12,5 +12,7 @@ namespace backend.Entities
         public DbSet<Dish> Dishes { get; set; }
         public DbSet<Diet> Diets { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
