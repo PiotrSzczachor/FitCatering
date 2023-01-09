@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backend.Repositories
 {
-    public class DiscountsRepository : IDiscountRepository
+    public class DiscountsRepository : IDiscountsRepository
     {
         private readonly FitCateringContext db;
         private readonly IMapper mapper;

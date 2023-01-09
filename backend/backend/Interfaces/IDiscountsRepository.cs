@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Interfaces
 {
-    public interface IDiscountRepository
+    public interface IDiscountsRepository
     {
         Task<IEnumerable<Discount>> getDiscounts();
         Task<Discount?> getDiscountById(int id);

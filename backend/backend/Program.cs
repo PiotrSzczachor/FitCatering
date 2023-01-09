@@ -16,7 +16,9 @@ IServiceCollection serviceCollection = builder.Services.AddEntityFrameworkNpgsql
         opt.UseNpgsql(builder.Configuration.GetConnectionString("ConStr")));
 builder.Services.AddScoped<IDishesRepository, DishesRepository>();
 builder.Services.AddScoped<IDietsRepository, DietsRepository>();
-builder.Services.AddScoped<IDiscountRepository, DiscountsRepository>();
+builder.Services.AddScoped<IDiscountsRepository, DiscountsRepository>();
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddScoped<ICommentsRepository, CommentsRepository>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddCors(policyBuilder =>
     policyBuilder.AddDefaultPolicy(policy =>

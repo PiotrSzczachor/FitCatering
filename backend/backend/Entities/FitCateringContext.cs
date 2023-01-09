@@ -14,6 +14,6 @@ namespace backend.Entities
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<Address> Address { get; set; }
+        public DbSet<Address> Addresses { get; set; }
     }
 }

@@ -10,9 +10,9 @@ namespace backend.Controllers
     [ApiController]
     public class DiscountsController : Controller
     {
-        private readonly IDiscountRepository discountRepository;
+        private readonly IDiscountsRepository discountRepository;
 
-        public DiscountsController(IDiscountRepository discountRepository)
+        public DiscountsController(IDiscountsRepository discountRepository)
         {
             this.discountRepository = discountRepository;
         }
