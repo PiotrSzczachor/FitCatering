@@ -1,29 +1,39 @@
-div.menu-panel-content{
-    height: 100%;
+input.search-input{
+    width: 12vw;
+    height: 30%;
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid rgb(34, 34, 71);
+    transition: 0.5s;
+    border-radius: 5px;
+    margin-left: 24px;
+}
+
+input.search-input:focus {
+    outline: none;
+    border: 3px solid rgb(237, 138, 49);
+}
+
+input.search-input:focus+mat-icon {
+    color: rgb(237, 138, 49);
+    transition: 0.3s;
+}
+
+div.search-parameters{
+    width: 100%;
+    height: 10vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+}
+
+div.search-input-container{
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-p.menu-heading{
-    font-size: 60px;
-    color: rgb(237, 138, 49);
-    margin-bottom: -150px;
-}
-
-div.menu-cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
-    max-width: 2001px;
-    height: 100%;
-    margin-top: 250px;
-}
-
-div.menu-cards-container::after{
-    content: "";
-    width: 500px;
-    flex: auto;
+div.cuisine-dropdown-container{
+    width: 10vw;
 }

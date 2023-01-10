@@ -1,26 +1,48 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { HttpClient } from '@angular/common/Http';
-import { environment } from '../../../environments/environment'
-import { IDish } from 'src/app/Interfaces/IDish';
-import SwiperCore, { EffectCoverflow, Navigation, Pagination, Autoplay } from 'swiper';
-SwiperCore.use([EffectCoverflow, Pagination, Navigation, Autoplay]);
+import { Component, OnInit } from '@angular/core';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 
 @Component({
   selector: 'app-menu-panel',
   templateUrl: './menu-panel.component.html',
-  styleUrls: ['./menu-panel.component.css'],
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./menu-panel.component.css']
 })
 export class MenuPanelComponent implements OnInit {
 
-  constructor(private http : HttpClient) { }
+  dropdownList: any[] = [];
+  selectedItems: any = [];
+  dropdownSettings!: IDropdownSettings;
 
-  public dishes: IDish[] = [];
+  constructor() { }
 
+  ngOnInit(): void {
+    this.dropdownList = [
+      { item_id: 1, item_text: 'Mumbai' },
+      { item_id: 2, item_text: 'Bangaluru' },
+      { item_id: 3, item_text: 'Pune' },
+      { item_id: 4, item_text: 'Navsari' },
+      { item_id: 5, item_text: 'New Delhi' }
+    ];
+    this.selectedItems = [
+      { item_id: 3, item_text: 'Pune' },
+      { item_id: 4, item_text: 'Navsari' }
+    ];
+    this.dropdownSettings = {
+      singleSelection: false,
+      idField: 'item_id',
+      textField: 'item_text',
+      selectAllText: 'Select All',
+      unSelectAllText: 'UnSelect All',
+      itemsShowLimit: 3,
+      allowSearchFilter: true
+    };
+  }
 
-  async ngOnInit(): Promise<void> {
-    await this.http.get<IDish[]>(environment.apiUrl + "Dishes").subscribe(res => res.forEach((dish: any) => this.dishes.push(dish)));
+  onItemSelect(item: any) {
+    console.log(item);
+  }
+  onSelectAll(items: any) {
+    console.log(items);
   }
 
 }

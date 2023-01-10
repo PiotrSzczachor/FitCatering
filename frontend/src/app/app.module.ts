@@ -10,7 +10,7 @@ import { AdvertisementPanelComponent } from './components/advertisement-panel/ad
 import { DietsPanelComponent } from './components/diets-panel/diets-panel.component';
 import { DietTypeCardComponent } from './components/diet-type-card/diet-type-card.component';
 import { SwiperModule } from 'swiper/angular';
-import { MenuPanelComponent } from './components/menu-panel/menu-panel.component';
+import { MenuSectionComponent } from './components/menu-section/menu-section.component';
 import { MenuDishCardComponent } from './components/menu-dish-card/menu-dish-card.component';
 import { ShoppingCartPanelComponent } from './components/shopping-cart-panel/shopping-cart-panel.component';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -19,7 +19,9 @@ import {HttpClientModule} from '@angular/common/Http';
 import { DietViewerComponent } from './components/diet-viewer/diet-viewer.component';
 import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.component';
 import { MatIconModule } from '@angular/material/icon';
-import { CommentsPanelComponent } from './components/comments-panel/comments-panel.component' ;
+import { CommentsPanelComponent } from './components/comments-panel/comments-panel.component';
+import { MenuPanelComponent } from './components/menu-panel/menu-panel.component' ;
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,13 @@ import { CommentsPanelComponent } from './components/comments-panel/comments-pan
     AdvertisementPanelComponent,
     DietsPanelComponent,
     DietTypeCardComponent,
-    MenuPanelComponent,
+    MenuSectionComponent,
     MenuDishCardComponent,
     ShoppingCartPanelComponent,
     DietViewerComponent,
     MenuViewerComponent,
     CommentsPanelComponent,
+    MenuPanelComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { CommentsPanelComponent } from './components/comments-panel/comments-pan
     MatDialogModule,
     MatTableModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

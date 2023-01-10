@@ -1,17 +1,17 @@
 <div class="menu-panel-content">
-    <p class="menu-heading">Menu</p>
-    <div class="menu-cards-container">
-        <swiper
-        [slidesPerView]="3"
-        [spaceBetween]="30"
-        [slidesPerGroup]="3"
-        [loop]="true"
-        [loopFillGroupWithBlank]="true"
-        [loopedSlides]="3"
-        [navigation]="true"
-        class="mySwiper"
-        >
-        <ng-template swiperSlide *ngFor="let card of dishes"><app-menu-dish-card [imgUrl]="card.imgUrl" [name]="card.name" [cuisine]="card.cuisine" [type]="card.type" [price]="card.price"></app-menu-dish-card></ng-template>
-        </swiper>
+    <div class="search-parameters">
+        <div class="search-input-container">
+            <input type="text" class="search-input">
+            <mat-icon>search</mat-icon>
+        </div>
+        <div class="cuisine-dropdown-container">
+            <ng-multiselect-dropdown
+            [placeholder]="'custom placeholder'"
+            [settings]="dropdownSettings"
+            [data]="dropdownList"
+            (onSelect)="onItemSelect($event)"
+            (onSelectAll)="onSelectAll($event)">
+            </ng-multiselect-dropdown>
+        </div>
     </div>
 </div>
