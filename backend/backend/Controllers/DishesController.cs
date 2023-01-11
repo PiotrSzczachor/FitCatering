@@ -52,5 +52,11 @@ namespace backend.Controllers
         {
             return await IdishesRepository.deleteDish(id);
         }
+
+        [HttpGet("GetCuisines")]
+        public async Task<IEnumerable<CuisineDTO>> getCuisines()
+        {
+            return await IdishesRepository.getCuisines();
+        }
     }
 }

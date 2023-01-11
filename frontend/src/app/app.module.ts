@@ -22,6 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommentsPanelComponent } from './components/comments-panel/comments-panel.component';
 import { MenuPanelComponent } from './components/menu-panel/menu-panel.component' ;
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import {MatSliderModule} from '@angular/material/slider';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     MatTableModule,
     HttpClientModule,
     MatIconModule,
-    NgMultiSelectDropDownModule.forRoot()
+    NgMultiSelectDropDownModule.forRoot(),
+    MatSliderModule,
+    NgxSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

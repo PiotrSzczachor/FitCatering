@@ -11,5 +11,6 @@ namespace backend.Interfaces
         Task<ActionResult<Dish>> addDish(Dish dish);
         Task<ActionResult<Dish?>> deleteDish(int id);
         Task<ActionResult<List<DishDTO>>> addDishes(List<DishDTO> dishes);
+        Task<IEnumerable<CuisineDTO>> getCuisines();
     }
 }

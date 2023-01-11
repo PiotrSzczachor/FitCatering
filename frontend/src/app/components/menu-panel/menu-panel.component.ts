@@ -1,5 +1,12 @@
+import { Options } from '@angular-slider/ngx-slider';
+import { HttpClient } from '@angular/common/Http';
 import { Component, OnInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
+import { Observable } from 'rxjs';
+import { ICuisineDropdownElement } from 'src/app/Interfaces/ICuisineDropdownElement';
+import { IDish } from 'src/app/Interfaces/IDish';
+import { environment } from 'src/environments/environment';
+
 
 
 @Component({
@@ -9,28 +16,27 @@ import { IDropdownSettings } from 'ng-multiselect-dropdown';
 })
 export class MenuPanelComponent implements OnInit {
 
+  public dishes: IDish[] = [];
+  value: number = 70;
+  highValue: number = 90;
+  options: Options = {
+    floor: 0,
+    ceil: 100
+  };
+
   dropdownList: any[] = [];
-  selectedItems: any = [];
+  selectedItems: Set<string> = new Set();
   dropdownSettings!: IDropdownSettings;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
-    this.dropdownList = [
-      { item_id: 1, item_text: 'Mumbai' },
-      { item_id: 2, item_text: 'Bangaluru' },
-      { item_id: 3, item_text: 'Pune' },
-      { item_id: 4, item_text: 'Navsari' },
-      { item_id: 5, item_text: 'New Delhi' }
-    ];
-    this.selectedItems = [
-      { item_id: 3, item_text: 'Pune' },
-      { item_id: 4, item_text: 'Navsari' }
-    ];
+  async ngOnInit(): Promise<void> {
+    await this.http.get<any[]>(environment.apiUrl + "Dishes/GetCuisines").subscribe(res => res.forEach(item => this.dropdownList.push(item)));
+    console.log(this.dropdownList);
     this.dropdownSettings = {
       singleSelection: false,
-      idField: 'item_id',
-      textField: 'item_text',
+      idField: 'id',
+      textField: 'name',
       selectAllText: 'Select All',
       unSelectAllText: 'UnSelect All',
       itemsShowLimit: 3,
@@ -39,10 +45,22 @@ export class MenuPanelComponent implements OnInit {
   }
 
   onItemSelect(item: any) {
-    console.log(item);
+    this.selectedItems.add(item.name)
+    console.log(this.selectedItems);
   }
+
   onSelectAll(items: any) {
-    console.log(items);
+    items.forEach((item: any) => this.selectedItems.add(item.name));
+    console.log(this.selectedItems);
+  }
+
+  onItemDeSelect(item: any){
+    this.selectedItems.delete(item.name);
+    console.log(this.selectedItems);
+  }
+
+  onDeSelectAll(items: any){
+    this.selectedItems.clear();
   }
 
 }

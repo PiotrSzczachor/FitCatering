@@ -57,5 +57,21 @@ namespace backend.Services
             await db.SaveChangesAsync();
             return dishesDTO;
         }
+
+        public async Task<IEnumerable<CuisineDTO>> getCuisines()
+        {
+            var dishes = await db.Dishes.ToListAsync();
+            List<string> cuisines = new List<string>();
+            List<CuisineDTO> cuisineDTOs = new List<CuisineDTO>();
+            foreach (Dish dish in dishes)
+            {
+                if (dish.Cuisine != null && !cuisines.Contains(dish.Cuisine)) cuisines.Add(dish.Cuisine);
+            }
+            for(int i = 0; i < cuisines.Count; i++)
+            {
+                cuisineDTOs.Add(new CuisineDTO { Id = i, Name = cuisines[i] });
+            }
+            return cuisineDTOs;
+        }
     }
 }

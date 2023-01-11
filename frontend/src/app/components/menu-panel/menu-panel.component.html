@@ -5,13 +5,19 @@
             <mat-icon>search</mat-icon>
         </div>
         <div class="cuisine-dropdown-container">
-            <ng-multiselect-dropdown
-            [placeholder]="'custom placeholder'"
+            <ng-multiselect-dropdown *ngIf="dropdownList.length > 0"
+            [placeholder]="'Cuisine'"
             [settings]="dropdownSettings"
             [data]="dropdownList"
             (onSelect)="onItemSelect($event)"
-            (onSelectAll)="onSelectAll($event)">
+            (onSelectAll)="onSelectAll($event)"
+            (onDeSelect)="onItemDeSelect($event)"
+            (onDeSelectAll)="onDeSelectAll($event)">
             </ng-multiselect-dropdown>
         </div>
+        <div class="price-slider-container">
+            <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options" class="custom-slider"></ngx-slider>
+        </div>
+        <button class="search-button">Search</button>
     </div>
 </div>
