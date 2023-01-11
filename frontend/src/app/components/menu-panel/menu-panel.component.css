@@ -77,3 +77,13 @@ button.search-button:hover{
 ::ng-deep .dropdown-list .filter-textbox input{
     padding: 0!important;
 }
+
+div.dishes-cards-container{
+    height: 60vh;
+}
+
+div.pagination-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

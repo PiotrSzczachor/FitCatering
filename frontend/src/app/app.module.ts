@@ -24,6 +24,7 @@ import { MenuPanelComponent } from './components/menu-panel/menu-panel.component
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {MatSliderModule} from '@angular/material/slider';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,9 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     MatIconModule,
     NgMultiSelectDropDownModule.forRoot(),
     MatSliderModule,
-    NgxSliderModule
+    NgxSliderModule,
+    NgbModule,
+    NgbPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,12 @@
 import { Options } from '@angular-slider/ngx-slider';
 import { HttpClient } from '@angular/common/Http';
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { Observable } from 'rxjs';
 import { ICuisineDropdownElement } from 'src/app/Interfaces/ICuisineDropdownElement';
 import { IDish } from 'src/app/Interfaces/IDish';
 import { environment } from 'src/environments/environment';
+import { NgbModule, NgbPagination, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -27,6 +28,7 @@ export class MenuPanelComponent implements OnInit {
   dropdownList: any[] = [];
   selectedItems: Set<string> = new Set();
   dropdownSettings!: IDropdownSettings;
+  page: number = 1;
 
   constructor(private http: HttpClient) { }
 
