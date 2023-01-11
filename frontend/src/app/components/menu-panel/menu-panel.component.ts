@@ -46,17 +46,14 @@ export class MenuPanelComponent implements OnInit {
 
   onItemSelect(item: any) {
     this.selectedItems.add(item.name)
-    console.log(this.selectedItems);
   }
 
   onSelectAll(items: any) {
     items.forEach((item: any) => this.selectedItems.add(item.name));
-    console.log(this.selectedItems);
   }
 
   onItemDeSelect(item: any){
     this.selectedItems.delete(item.name);
-    console.log(this.selectedItems);
   }
 
   onDeSelectAll(items: any){
