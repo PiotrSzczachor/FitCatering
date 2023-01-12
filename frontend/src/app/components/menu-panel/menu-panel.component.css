@@ -12,12 +12,11 @@ div.search-parameters{
 input.search-input{
     width: 12vw;
     height: 30%;
-    font-size: 20px;
+    font-size: 2vh;
     text-align: center;
     border: 3px solid rgb(34, 34, 71);
     transition: 0.5s;
     border-radius: 5px;
-    margin-left: 24px;
 }
 
 input.search-input:focus {
@@ -59,7 +58,7 @@ div.price-slider-container{
 button.search-button{
     background-color: rgb(34, 34, 71);
     color: rgb(237, 138, 49);
-    font-size: 20px;
+    font-size: 2vh;
     border-color: transparent;
     border-radius: 20px;
     cursor: pointer;
@@ -79,7 +78,7 @@ button.search-button:hover{
 }
 
 div.dishes-cards-container{
-    height: 60vh;
+    height: 70vh;
 }
 
 div.pagination-footer{

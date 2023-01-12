@@ -2,6 +2,7 @@
 using backend.Entities;
 using backend.Interfaces;
 using backend.Services;
+using backend.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,9 +20,9 @@ namespace backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Dish>> GetDishes()
+        public async Task<IEnumerable<Dish>> GetDishes([FromQuery]PaginParameters paginParameters)
         {
-            return await IdishesRepository.getAllDishes();
+            return await IdishesRepository.getDishes(paginParameters);
         }
 
         [HttpGet("{id}")]

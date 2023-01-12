@@ -21,7 +21,7 @@
         <button class="search-button">Search</button>
     </div>
     <div class="dishes-cards-container">
-
+        <app-menu-dish-card *ngFor="let card of (dishes|async)" [imgUrl]="card.imgUrl" [name]="card.name" [cuisine]="card.cuisine" [type]="card.type" [price]="card.price"></app-menu-dish-card>
     </div>
     <div class="pagination-footer">
         <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>

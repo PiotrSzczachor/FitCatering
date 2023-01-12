@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using backend.DTO;
 using backend.Entities;
+using backend.Helpers;
 using backend.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,7 @@ namespace backend.Services
 
         }
 
-        public async Task<IEnumerable<Dish>> getAllDishes()
+        public async Task<IEnumerable<Dish>> getDishes(PaginParameters paginParameters)
         {
             return await db.Dishes.ToListAsync();
         }

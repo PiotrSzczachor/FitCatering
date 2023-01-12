@@ -17,7 +17,7 @@ import { NgbModule, NgbPagination, NgbAlertModule } from '@ng-bootstrap/ng-boots
 })
 export class MenuPanelComponent implements OnInit {
 
-  public dishes: IDish[] = [];
+  public dishes!: Observable<IDish[]>;
   value: number = 70;
   highValue: number = 90;
   options: Options = {
@@ -34,7 +34,7 @@ export class MenuPanelComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     await this.http.get<any[]>(environment.apiUrl + "Dishes/GetCuisines").subscribe(res => res.forEach(item => this.dropdownList.push(item)));
-    console.log(this.dropdownList);
+    this.dishes = await this.http.get<IDish[]>(environment.apiUrl + "Dishes");
     this.dropdownSettings = {
       singleSelection: false,
       idField: 'id',
