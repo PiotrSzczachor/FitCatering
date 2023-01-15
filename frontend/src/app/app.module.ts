@@ -25,6 +25,8 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {MatSliderModule} from '@angular/material/slider';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { MapComponent } from './components/map/map.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet'
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
     MenuViewerComponent,
     CommentsPanelComponent,
     MenuPanelComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
     MatSliderModule,
     NgxSliderModule,
     NgbModule,
-    NgbPaginationModule
+    NgbPaginationModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
