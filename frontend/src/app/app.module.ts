@@ -26,7 +26,11 @@ import {MatSliderModule} from '@angular/material/slider';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { MapComponent } from './components/map/map.component';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet'
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { ShippingPanelComponent } from './components/shipping-panel/shipping-panel.component';
+import { ContactPanelComponent } from './components/contact-panel/contact-panel.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component'
 
 @NgModule({
   declarations: [
@@ -44,6 +48,10 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet'
     CommentsPanelComponent,
     MenuPanelComponent,
     MapComponent,
+    ShippingPanelComponent,
+    ContactPanelComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

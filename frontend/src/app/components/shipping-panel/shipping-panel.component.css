@@ -1,0 +1,74 @@
+div.shipping-panel-content{
+    background-image: url("../../../assets/shipping-background3.jpg");
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.shipping-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+div.map-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div.shipping-info-content{
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60vh;
+    flex-direction: column;
+}
+
+p.heading, span.collored-words{
+    font-size: 4.5vh;
+    line-height: 4.5vh;
+    margin-top: 5vh;
+    color: rgb(34, 34, 71);
+}
+
+span.collored-words{
+    color: rgb(237, 138, 49);
+}
+
+div.description{
+    margin: 2vh;
+}
+
+p.description-text{
+    margin: 1vh;
+    margin-top: 3vh;
+    font-size: 2vh;
+}
+
+button.contact-button{
+    background-color: rgb(237, 138, 49);
+    color: rgb(34, 34, 71);
+    width: 20%;
+    font-size: 2vh;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+    font-family: "Sofia", sans-serif;
+}
+
+button.contact-button:hover{
+    cursor: pointer;
+    background-color: rgb(34, 34, 71);
+    color: rgb(237, 138, 49);
+    transition: 0.7s;
+}

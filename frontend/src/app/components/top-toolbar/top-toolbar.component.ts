@@ -41,6 +41,18 @@ export class TopToolbarComponent implements OnInit {
     this.router.navigate(['menu']);
   }
 
+  shippingZoneButtonClick(){
+    this.router.navigate(['shipping']);
+  }
+
+  contactButtonClick(){
+    this.router.navigate(['contact']);
+  }
+
+  clientPanelButtonClick(){
+    this.router.navigate(['login']);
+  }
+
   openShoppingCart(){
     if(this.checkOutService.productsNumber > 0){
       const dialogConfig = new MatDialogConfig();

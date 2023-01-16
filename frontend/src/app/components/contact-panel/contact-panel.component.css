@@ -1,0 +1,82 @@
+div.contact-panel-content{
+    height: 90vh;
+    display: flex;
+}
+
+div.img-section{
+    height: 90vh;
+    width: 70vw;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+p.heading, span.collored-words{
+    font-size: 4.5vh;
+    line-height: 4.5vh;
+    margin-top: 5vh;
+    color: rgb(34, 34, 71);
+}
+
+span.collored-words{
+    color: rgb(237, 138, 49);
+}
+
+.form-container{
+    margin-top: 2vh;
+    background-color: rgb(34, 34, 71);
+    height: 60vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input.input-fields, .message{
+    height: 4vh;
+    width: 20vw;
+    margin: 1vh;
+    border-radius: 20px;
+    border: none;
+    padding-left: 1vw;
+    transition: 0.3s;
+}
+
+input.input-fields:focus, .message:focus {
+    outline: none;
+    border: 3px solid rgb(237, 138, 49);
+}
+
+.message{
+    height: 30vh;
+    max-height: 30vh;
+    min-height: 30vh;
+    margin-bottom: 0;
+}
+
+
+input.first-field{
+    margin-top: 0;
+}
+
+button.send-button{
+    font-size: 20px;
+    height: 45px;
+    width: 150px;
+    border-radius: 30px;
+    border-color: transparent;
+    background-color: rgb(237, 138, 49);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2vh;
+    font-family: "Sofia", sans-serif;
+}
+
+button.send-button:hover{
+    background-color: white;
+    color: rgb(237, 138, 49);
+    transition: 0.7s;
+}

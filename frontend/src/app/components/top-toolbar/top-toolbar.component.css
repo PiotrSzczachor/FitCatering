@@ -1,6 +1,6 @@
 div.sticky-container{
     width: 100%;
-    height: 100px;
+    height: 10vh;
     background-color: rgb(34, 34, 71);
     display: flex;
     justify-content: space-around;
