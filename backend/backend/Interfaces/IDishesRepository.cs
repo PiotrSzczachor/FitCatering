@@ -7,7 +7,7 @@ namespace backend.Interfaces
 {
     public interface IDishesRepository
     {
-        Task<IEnumerable<Dish>> getDishes(PaginParameters paginParameters);
+        Task<PagedList<Dish>> getDishes(PaginParameters paginParameters);
         Task<Dish?> getDishById(int id);
         Task<ActionResult<Dish>> addDish(Dish dish);
         Task<ActionResult<Dish?>> deleteDish(int id);

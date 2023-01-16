@@ -20,9 +20,10 @@ namespace backend.Services
 
         }
 
-        public async Task<IEnumerable<Dish>> getDishes(PaginParameters paginParameters)
+        public async Task<PagedList<Dish>> getDishes(PaginParameters paginParameters)
         {
-            return await db.Dishes.ToListAsync();
+            var query = db.Dishes;
+            return await PagedList<Dish>.ToPagedList(query, paginParameters.PageNumber, paginParameters.PageSize);
         }
 
         public async Task<Dish?> getDishById(int id)

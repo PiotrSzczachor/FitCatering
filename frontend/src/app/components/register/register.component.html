@@ -1,1 +1,22 @@
 <app-top-toolbar></app-top-toolbar>
+<div class="register-panel-content">
+    <div class="register-form-container">
+        <p class="heading">Hello!</p>
+        <form action="" class="register-form">
+            <input type="text" class="register-fields" placeholder="Name">
+            <input type="text" class="register-fields" placeholder="Surname">
+            <input type="text" class="register-fields" placeholder="E-mail">
+            <input type="text" class="register-fields" placeholder="City">
+            <input type="text" class="register-fields" placeholder="Postal code">
+            <input type="text" class="register-fields" placeholder="Address">
+            <input type="text" class="register-fields" placeholder="Phone number">
+            <input type="password" class="register-fields" placeholder="Password">
+            <input type="password" class="register-fields" placeholder="Repeat password">
+        </form>
+        <p class="dont-have-acc">Already have an Account?<span class="collored-words" (click)="LogInButtonClick()">Log In</span> now!</p>
+        <div class="buttons-container">
+            <button class="sign-up-button" (click)="LogInButtonClick()">Log In</button>
+            <button class="log-in-button">Sign Up</button>
+        </div>
+    </div>
+</div>
