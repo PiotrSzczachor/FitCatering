@@ -20,9 +20,14 @@ namespace backend.Controllers
         }
 
         [HttpGet]
-        public async Task<PagedList<Dish>> GetDishes([FromQuery]PaginParameters paginParameters)
+        public async Task<IEnumerable<Dish>> GetDishes()
         {
-            return await IdishesRepository.getDishes(paginParameters);
+            return await IdishesRepository.getDishes();
+        }
+        [HttpGet("Pagin")]
+        public async Task<PagedList<Dish>> GetDishesPagin([FromQuery] PaginParameters paginParameters)
+        {
+            return await IdishesRepository.getDishesPagin(paginParameters);
         }
 
         [HttpGet("{id}")]
@@ -58,6 +63,12 @@ namespace backend.Controllers
         public async Task<IEnumerable<CuisineDTO>> getCuisines()
         {
             return await IdishesRepository.getCuisines();
+        }
+
+        [HttpGet("GetDishesNumber")]
+        public async Task<int> getDishesNumber()
+        {
+            return await IdishesRepository.getDishesNumber();
         }
     }
 }

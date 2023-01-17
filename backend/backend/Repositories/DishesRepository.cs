@@ -5,6 +5,7 @@ using backend.Helpers;
 using backend.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace backend.Services
 {
@@ -20,7 +21,12 @@ namespace backend.Services
 
         }
 
-        public async Task<PagedList<Dish>> getDishes(PaginParameters paginParameters)
+        public async Task<IEnumerable<Dish>> getDishes()
+        {
+            return await db.Dishes.ToListAsync();
+        }
+
+        public async Task<PagedList<Dish>> getDishesPagin(PaginParameters paginParameters)
         {
             var query = db.Dishes;
             return await PagedList<Dish>.ToPagedList(query, paginParameters.PageNumber, paginParameters.PageSize);
@@ -74,6 +80,11 @@ namespace backend.Services
                 cuisineDTOs.Add(new CuisineDTO { Id = i, Name = cuisines[i] });
             }
             return cuisineDTOs;
+        }
+
+        public async Task<int> getDishesNumber()
+        {
+            return await db.Dishes.CountAsync();
         }
     }
 }

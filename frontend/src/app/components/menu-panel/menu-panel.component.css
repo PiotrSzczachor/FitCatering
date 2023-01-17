@@ -55,7 +55,7 @@ div.price-slider-container{
     background: rgb(34, 34, 71)!important;
 }
 
-button.search-button{
+button.search-button, button.add-dish-button{
     background-color: rgb(34, 34, 71);
     color: rgb(237, 138, 49);
     font-size: 2vh;
@@ -64,6 +64,12 @@ button.search-button{
     cursor: pointer;
     pointer-events: auto;
     font-family: "Sofia", sans-serif;
+}
+
+button.add-dish-button{
+    border-radius: 50%;
+    height: 3.5vh;
+    width: 3.5vh;
 }
 
 button.search-button:hover{
@@ -79,10 +85,25 @@ button.search-button:hover{
 
 div.dishes-cards-container{
     height: 70vh;
+    display: flex;
+    justify-content: center;
 }
 
 div.pagination-footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+div.whole-page{
+    position: absolute;
+    top: 0;
+    height: 98vh;
+    width: 98vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
 }

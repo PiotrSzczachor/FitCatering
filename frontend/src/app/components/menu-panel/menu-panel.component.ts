@@ -7,7 +7,7 @@ import { ICuisineDropdownElement } from 'src/app/Interfaces/ICuisineDropdownElem
 import { IDish } from 'src/app/Interfaces/IDish';
 import { environment } from 'src/environments/environment';
 import { NgbModule, NgbPagination, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { switchMap, take } from 'rxjs/operators';
 
 
 @Component({
@@ -17,6 +17,9 @@ import { NgbModule, NgbPagination, NgbAlertModule } from '@ng-bootstrap/ng-boots
 })
 export class MenuPanelComponent implements OnInit {
 
+  pageNumber: number = 1;
+  pageSize: number = 4;
+  numberOfDishes!: Observable<number>;
   public dishes!: Observable<IDish[]>;
   value: number = 70;
   highValue: number = 90;
@@ -28,13 +31,13 @@ export class MenuPanelComponent implements OnInit {
   dropdownList: any[] = [];
   selectedItems: Set<string> = new Set();
   dropdownSettings!: IDropdownSettings;
-  page: number = 1;
 
   constructor(private http: HttpClient) { }
 
   async ngOnInit(): Promise<void> {
     await this.http.get<any[]>(environment.apiUrl + "Dishes/GetCuisines").subscribe(res => res.forEach(item => this.dropdownList.push(item)));
-    this.dishes = await this.http.get<IDish[]>(environment.apiUrl + "Dishes");
+    this.numberOfDishes = await this.http.get<number>(environment.apiUrl + "Dishes/GetDishesNumber");
+    this.dishes = await this.http.get<IDish[]>(environment.apiUrl + "Dishes/Pagin?PageNumber=1&PageSize=" + this.pageSize);
     this.dropdownSettings = {
       singleSelection: false,
       idField: 'id',
@@ -62,4 +65,11 @@ export class MenuPanelComponent implements OnInit {
     this.selectedItems.clear();
   }
 
+  async getDishesPagin(){
+    this.dishes = await this.http.get<IDish[]>(environment.apiUrl + "Dishes/Pagin?PageNumber=" + this.pageNumber + "&PageSize=" + this.pageSize);
+  }
+
+  calcPages(val: number): number{
+    return Math.round(val)/4*10;
+  }
 }

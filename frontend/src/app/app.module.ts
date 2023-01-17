@@ -31,6 +31,7 @@ import { ShippingPanelComponent } from './components/shipping-panel/shipping-pan
 import { ContactPanelComponent } from './components/contact-panel/contact-panel.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { RegisterComponent } from './components/register/register.component'
     NgxSliderModule,
     NgbModule,
     NgbPaginationModule,
-    LeafletModule
+    LeafletModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
