@@ -72,7 +72,7 @@ button.add-dish-button{
     width: 3.5vh;
 }
 
-button.search-button:hover{
+button.search-button:hover, button.add-dish-button:hover{
     cursor: pointer;
     background-color: rgb(237, 138, 49);
     color: rgb(34, 34, 71);

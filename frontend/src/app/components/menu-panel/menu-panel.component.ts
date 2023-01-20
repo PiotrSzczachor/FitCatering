@@ -8,6 +8,8 @@ import { IDish } from 'src/app/Interfaces/IDish';
 import { environment } from 'src/environments/environment';
 import { NgbModule, NgbPagination, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { switchMap, take } from 'rxjs/operators';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { AddDishComponent } from '../add-dish/add-dish.component';
 
 
 @Component({
@@ -32,7 +34,8 @@ export class MenuPanelComponent implements OnInit {
   selectedItems: Set<string> = new Set();
   dropdownSettings!: IDropdownSettings;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              private dialog: MatDialog) { }
 
   async ngOnInit(): Promise<void> {
     await this.http.get<any[]>(environment.apiUrl + "Dishes/GetCuisines").subscribe(res => res.forEach(item => this.dropdownList.push(item)));
@@ -71,5 +74,11 @@ export class MenuPanelComponent implements OnInit {
 
   calcPages(val: number): number{
     return Math.round(val)/4*10;
+  }
+
+  openAddDishModal(){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = true;
+    let dialogRef = this.dialog.open(AddDishComponent, dialogConfig);
   }
 }
