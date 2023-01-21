@@ -8,7 +8,7 @@ namespace backend.Interfaces
     {
         Task<IEnumerable<User>> getAllUsers();
         Task<User?> getUserById(int id);
-        Task<ActionResult<User>> addUser(User user);
+        Task<ActionResult<string>> registerUser(UserRegisterDTO user);
         Task<ActionResult<User?>> deleteUser(int id);
     }
 }

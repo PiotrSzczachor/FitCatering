@@ -33,7 +33,6 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component'
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AddDishComponent } from './components/add-dish/add-dish.component';
-import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -55,7 +54,6 @@ import { FileUploadModule } from 'ng2-file-upload';
     ContactPanelComponent,
     LoginComponent,
     RegisterComponent,
-    AddDishComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,7 +71,6 @@ import { FileUploadModule } from 'ng2-file-upload';
     NgbPaginationModule,
     LeafletModule,
     MatProgressSpinnerModule,
-    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

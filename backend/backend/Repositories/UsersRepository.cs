@@ -1,9 +1,15 @@
 ﻿using AutoMapper;
 using backend.DTO;
 using backend.Entities;
+using backend.Helpers;
 using backend.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace backend.Repositories
 {
@@ -18,15 +24,29 @@ namespace backend.Repositories
             mapper = _mapper;
 
         }
-        public async Task<ActionResult<User>> addUser(User user)
+        public async Task<ActionResult<string>> registerUser(UserRegisterDTO registerDTO)
         {
+            var user = mapper.Map<User>(registerDTO);
             if (user.Address != null)
             {
                 await db.Addresses.AddAsync(user.Address);
             }
+            using var hmac = new HMACSHA512();
+            user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDTO.Password));
+            user.PasswordSalt = hmac.Key;
             await db.Users.AddAsync(user);
             await db.SaveChangesAsync();
-            return user;
+            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ConfigurationManager.AppSetting["JWT:Secret"]));
+            var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
+            var tokenOptions = new JwtSecurityToken(
+                    issuer: ConfigurationManager.AppSetting["JWT:ValidIssuer"],
+                    audience: ConfigurationManager.AppSetting["JWT:ValidAudience"],
+                    claims: new List<Claim>(),
+                    expires: DateTime.Now.AddMinutes(6),
+                    signingCredentials: signinCredentials
+                );
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+            return tokenString;
         }
 
         

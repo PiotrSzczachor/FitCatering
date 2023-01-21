@@ -2,6 +2,7 @@
 using backend.Entities;
 using backend.Interfaces;
 using backend.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers
@@ -17,6 +18,7 @@ namespace backend.Controllers
             this.userRepository = userRepository;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IEnumerable<User>> GetUsers()
         {
@@ -24,15 +26,15 @@ namespace backend.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<User?> GetDiet(int id)
+        public async Task<User?> GetUser(int id)
         {
             return await userRepository.getUserById(id);
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> AddDiet([FromBody] User user)
+        public async Task<ActionResult<string>> RegisterUser([FromBody] UserRegisterDTO user)
         {
-            return await userRepository.addUser(user);
+            return await userRepository.registerUser(user);
         }
 
         [HttpPut("{id}")]
@@ -41,7 +43,7 @@ namespace backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<User?>> DeleteDiet(int id)
+        public async Task<ActionResult<User?>> DeleteUser(int id)
         {
             return await userRepository.deleteUser(id);
         }
