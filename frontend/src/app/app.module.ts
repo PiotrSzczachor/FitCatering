@@ -15,7 +15,7 @@ import { MenuDishCardComponent } from './components/menu-dish-card/menu-dish-car
 import { ShoppingCartPanelComponent } from './components/shopping-cart-panel/shopping-cart-panel.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table' ;
-import {HttpClientModule} from '@angular/common/Http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/Http';
 import { DietViewerComponent } from './components/diet-viewer/diet-viewer.component';
 import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -33,6 +33,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component'
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AddDishComponent } from './components/add-dish/add-dish.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MyInterceptorInterceptor } from './interceptors/my-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -71,8 +73,15 @@ import { AddDishComponent } from './components/add-dish/add-dish.component';
     NgbPaginationModule,
     LeafletModule,
     MatProgressSpinnerModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MyInterceptorInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,47 +8,51 @@ import {
   HttpErrorResponse,
 } from '@angular/common/Http';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  endpoint: string = 'http://localhost:4000/api';
+  endpoint: string = environment.apiUrl + "users";
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser = {};
-  constructor(private http: HttpClient, public router: Router) {}
+  constructor(private http: HttpClient, public router: Router) {
+
+  }
   // Sign-up
-  signUp(user: IUser): Observable<any> {
-    let api = `${this.endpoint}/register-user`;
+  register(user: IUser): Observable<any> {
+    let api = `${this.endpoint}/register`;
     return this.http.post(api, user).pipe(catchError(this.handleError));
   }
   // Sign-in
-  signIn(user: IUser) {
+  login(user: IUser) {
     return this.http
-      .post<any>(`${this.endpoint}/signin`, user)
+      .post<any>(`${this.endpoint}/login`, user)
       .subscribe((res: any) => {
-        localStorage.setItem('access_token', res.token);
-        this.getUserProfile(res._id).subscribe((res) => {
-          this.currentUser = res;
-          this.router.navigate(['user-profile/' + res.msg._id]);
-        });
+        localStorage.setItem('token', res.token);
+        this.currentUser = res;
+        this.router.navigate([""]);
       });
   }
   getToken() {
-    return localStorage.getItem('access_token');
+    return localStorage.getItem('token');
   }
+
   get isLoggedIn(): boolean {
-    let authToken = localStorage.getItem('access_token');
+    let authToken = localStorage.getItem('token');
     return authToken !== null ? true : false;
   }
   doLogout() {
-    let removeToken = localStorage.removeItem('access_token');
+    let removeToken = localStorage.removeItem('token');
+    this.currentUser = {};
     if (removeToken == null) {
-      this.router.navigate(['log-in']);
+      this.router.navigate(['login']);
     }
   }
   // User profile
   getUserProfile(id: any): Observable<any> {
-    let api = `${this.endpoint}/user-profile/${id}`;
+    let api = `${this.endpoint}/${id}`;
     return this.http.get(api, { headers: this.headers }).pipe(
       map((res) => {
         return res || {};

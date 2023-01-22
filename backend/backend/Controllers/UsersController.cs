@@ -31,10 +31,16 @@ namespace backend.Controllers
             return await userRepository.getUserById(id);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<string>> RegisterUser([FromBody] UserRegisterDTO user)
+        [HttpPost("register")]
+        public async Task<ActionResult<UserDTO>> RegisterUser([FromBody] UserRegisterDTO user)
         {
             return await userRepository.registerUser(user);
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<UserDTO>> LoginUser([FromBody] UserLoginDTO user)
+        {
+            return await userRepository.loginUser(user);
         }
 
         [HttpPut("{id}")]
