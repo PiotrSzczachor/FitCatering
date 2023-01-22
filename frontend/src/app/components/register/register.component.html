@@ -2,21 +2,56 @@
 <div class="register-panel-content">
     <div class="register-form-container">
         <p class="heading">Hello!</p>
-        <form [formGroup]="registerForm" class="register-form">
-            <input type="text" class="register-fields" placeholder="Name">
-            <input type="text" class="register-fields" placeholder="Surname">
-            <input type="text" class="register-fields" placeholder="E-mail">
-            <input type="text" class="register-fields" placeholder="City">
-            <input type="text" class="register-fields" placeholder="Postal code">
-            <input type="text" class="register-fields" placeholder="Street">
-            <input type="text" class="register-fields" placeholder="Number">
-            <input type="password" class="register-fields" placeholder="Password">
-            <input type="password" class="register-fields" placeholder="Repeat password">
-        </form>
+        <div class="register-form-only">
+            <form [formGroup]="registerForm" class="register-form">
+                <input type="text" class="register-fields" placeholder="Name" formControlName="name">
+                <mat-error *ngIf="registerForm.controls['name'].touched && registerForm.controls['name'].hasError('required')">
+                    Please enter your name
+                </mat-error>
+                <input type="text" class="register-fields" placeholder="Surname" formControlName="surname">
+                <mat-error *ngIf="registerForm.controls['surname'].touched && registerForm.controls['surname'].hasError('required')">
+                    Please enter your surname
+                </mat-error>
+                <input type="text" class="register-fields" placeholder="E-mail" formControlName="email">
+                <mat-error *ngIf="registerForm.controls['email'].touched && registerForm.controls['email'].hasError('required')">
+                    Please enter your email
+                </mat-error>
+                <mat-error *ngIf="registerForm.controls['email'].touched && registerForm.controls['email'].hasError('email')">
+                    Email format is incorrect
+                </mat-error>
+                <input type="text" class="register-fields" placeholder="City" formControlName="city">
+                <mat-error *ngIf="registerForm.controls['city'].touched && registerForm.controls['city'].hasError('required')">
+                    Please enter your city
+                </mat-error>
+                <input type="text" class="register-fields" placeholder="Postal code" formControlName="postalCode">
+                <mat-error *ngIf="registerForm.controls['postalCode'].touched && registerForm.controls['postalCode'].hasError('required')">
+                    Please enter your postal code
+                </mat-error>
+                <mat-error *ngIf="registerForm.controls['postalCode'].touched && registerForm.controls['postalCode'].hasError('pattern')">
+                    Postal code format should be 00-000
+                </mat-error>
+                <input type="text" class="register-fields" placeholder="Street" formControlName="street">
+                <mat-error *ngIf="registerForm.controls['street'].touched && registerForm.controls['street'].hasError('required')">
+                    Please enter your street
+                </mat-error>
+                <input type="text" class="register-fields" placeholder="Number" formControlName="number">
+                <mat-error *ngIf="registerForm.controls['number'].touched && registerForm.controls['number'].hasError('required')">
+                    Please enter your number
+                </mat-error>
+                <input type="password" class="register-fields" placeholder="Password" formControlName="password">
+                <mat-error *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].hasError('required')">
+                    Please enter your password
+                </mat-error>
+                <mat-error *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].hasError('minlength')">
+                    Password should have at least 8 characters
+                </mat-error>
+                <input type="password" class="register-fields" placeholder="Repeat password" formControlName="repeatPassword">
+            </form>
+        </div>
         <p class="dont-have-acc">Already have an Account?<span class="collored-words" (click)="LogInButtonClick()">Log In</span> now!</p>
         <div class="buttons-container">
-            <button class="sign-up-button" (click)="LogInButtonClick()">Log In</button>
-            <button class="log-in-button">Sign Up</button>
+            <button class="log-ip-button" (click)="LogInButtonClick()">Log In</button>
+            <button class="sign-up-button" (click)="SignUpButtonClick()">Sign Up</button>
         </div>
     </div>
 </div>

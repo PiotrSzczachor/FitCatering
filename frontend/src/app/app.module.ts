@@ -35,6 +35,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AddDishComponent } from './components/add-dish/add-dish.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyInterceptorInterceptor } from './interceptors/my-interceptor.interceptor';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { ClientPanelComponent } from './components/client-panel/client-panel.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +59,8 @@ import { MyInterceptorInterceptor } from './interceptors/my-interceptor.intercep
     ContactPanelComponent,
     LoginComponent,
     RegisterComponent,
+    AdminPanelComponent,
+    ClientPanelComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +79,7 @@ import { MyInterceptorInterceptor } from './interceptors/my-interceptor.intercep
     LeafletModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [
     {

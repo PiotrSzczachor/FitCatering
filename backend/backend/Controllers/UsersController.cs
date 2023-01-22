@@ -32,7 +32,7 @@ namespace backend.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<ActionResult<UserDTO>> RegisterUser([FromBody] UserRegisterDTO user)
+        public async Task<ActionResult<UserDTO>> RegisterUser([FromBody] RegisterDTO user)
         {
             return await userRepository.registerUser(user);
         }

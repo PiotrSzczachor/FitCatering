@@ -19,7 +19,7 @@
             <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options" class="custom-slider"></ngx-slider>
         </div>
         <button class="search-button">Search</button>
-        <button class="add-dish-button" (click)="openAddDishModal()"><i class="fa fa-plus"></i></button>
+        <button *ngIf="readLocalStorageValue('isAdmin') == 'true'" class="add-dish-button" (click)="openAddDishModal()"><i class="fa fa-plus"></i></button>
     </div>
     <div class="dishes-cards-container">
         <app-menu-dish-card *ngFor="let card of (dishes|async)" [imgUrl]="card.imgUrl" [name]="card.name" [cuisine]="card.cuisine" [type]="card.type" [price]="card.price"></app-menu-dish-card>

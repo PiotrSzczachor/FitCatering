@@ -16,15 +16,24 @@ import { environment } from 'src/environments/environment';
 export class AuthService {
   endpoint: string = environment.apiUrl + "users";
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  currentUser = {};
+  currentUser: any;
   badPassword: boolean = false;
   constructor(private http: HttpClient, public router: Router) {
 
   }
   // Sign-up
-  register(user: IUser): Observable<any> {
-    let api = `${this.endpoint}/register`;
-    return this.http.post(api, user).pipe(catchError(this.handleError));
+  register(registerDTO: any){
+    console.log(registerDTO);
+    this.http.post<any>(`${this.endpoint}/register`, registerDTO).subscribe((res: any) => {
+      if(res){
+        localStorage.setItem('token', res.token);
+        localStorage.setItem('email', res.email);
+        localStorage.setItem('isAdmin', res.isAdmin);
+        this.currentUser = res;
+        this.badPassword = false;
+        this.router.navigate([""]);
+      }
+    })
   }
   // Sign-in
   login(user: IUser) {
@@ -33,6 +42,8 @@ export class AuthService {
       .subscribe((res: any) => {
         if(res){
           localStorage.setItem('token', res.token);
+          localStorage.setItem('email', res.email);
+          localStorage.setItem('isAdmin', res.isAdmin);
           this.currentUser = res;
           this.badPassword = false;
           this.router.navigate([""]);
@@ -52,7 +63,8 @@ export class AuthService {
   }
   doLogout() {
     let removeToken = localStorage.removeItem('token');
-    this.currentUser = {};
+    localStorage.removeItem('email');
+    localStorage.removeItem('isAdmin');
     if (removeToken == null) {
       this.router.navigate(['login']);
     }

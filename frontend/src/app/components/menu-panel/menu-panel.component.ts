@@ -10,6 +10,7 @@ import { NgbModule, NgbPagination, NgbAlertModule } from '@ng-bootstrap/ng-boots
 import { switchMap, take } from 'rxjs/operators';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { AddDishComponent } from '../add-dish/add-dish.component';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -35,7 +36,8 @@ export class MenuPanelComponent implements OnInit {
   dropdownSettings!: IDropdownSettings;
 
   constructor(private http: HttpClient,
-              private dialog: MatDialog) { }
+              private dialog: MatDialog,
+              public authService: AuthService) { }
 
   async ngOnInit(): Promise<void> {
     await this.http.get<any[]>(environment.apiUrl + "Dishes/GetCuisines").subscribe(res => res.forEach(item => this.dropdownList.push(item)));
@@ -80,5 +82,9 @@ export class MenuPanelComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
     let dialogRef = this.dialog.open(AddDishComponent, dialogConfig);
+  }
+
+  readLocalStorageValue(key: string) {
+    return localStorage.getItem(key);
   }
 }

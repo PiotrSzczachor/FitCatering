@@ -25,15 +25,17 @@ namespace backend.Repositories
             mapper = _mapper;
 
         }
-        public async Task<ActionResult<UserDTO>> registerUser(UserRegisterDTO registerDTO)
+        public async Task<ActionResult<UserDTO>> registerUser(RegisterDTO registerDTO)
         {
-            var user = mapper.Map<User>(registerDTO);
+            var user = mapper.Map<User>(registerDTO.User);
+            var address = mapper.Map<Address>(registerDTO.Address);
             if (user.Address != null)
             {
-                await db.Addresses.AddAsync(user.Address);
+                await db.Addresses.AddAsync(address);
             }
+            user.Address = address;
             using var hmac = new HMACSHA512();
-            user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDTO.Password));
+            user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDTO.User.Password));
             user.PasswordSalt = hmac.Key;
             user.isAdmin = false;
             await db.Users.AddAsync(user);
@@ -51,7 +53,7 @@ namespace backend.Repositories
             var response = new UserDTO
             {
                 Token = tokenString,
-                Email = registerDTO.Email,
+                Email = user.Email,
                 IsAdmin = user.isAdmin
             };
             return response;

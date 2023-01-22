@@ -6,7 +6,7 @@ div.register-panel-content{
 }
 
 div.register-form-container{
-    height: 80vh;
+    height: 85vh;
     width: 25vw;
     background-color: rgb(34, 34, 71);
     border-radius: 20px;
@@ -21,6 +21,11 @@ form.register-form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+div.register-form-only{
+    overflow: scroll;
+    height: 58vh;
 }
 
 input.register-fields{

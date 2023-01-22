@@ -4,6 +4,7 @@ import { CheckOutService } from 'src/app/services/check-out.service';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { ShoppingCartPanelComponent } from '../shopping-cart-panel/shopping-cart-panel.component';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-top-toolbar',
@@ -16,7 +17,8 @@ export class TopToolbarComponent implements OnInit {
     private scroller: ViewportScroller,
     public checkOutService: CheckOutService,
     private dialog: MatDialog,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
     ) { }
 
   ngOnInit(): void {
@@ -50,7 +52,15 @@ export class TopToolbarComponent implements OnInit {
   }
 
   clientPanelButtonClick(){
-    this.router.navigate(['login']);
+    if(localStorage.getItem('token')){
+      if(localStorage.getItem('isAdmin') == 'true'){
+        this.router.navigate(['admin']);
+      } else {
+        this.router.navigate(['client']);
+      }
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 
   openShoppingCart(){
@@ -59,5 +69,14 @@ export class TopToolbarComponent implements OnInit {
       dialogConfig.autoFocus = true;
       let dialogRef = this.dialog.open(ShoppingCartPanelComponent, dialogConfig);
     }
+  }
+
+  readLocalStorageValue(key: string) {
+
+    return localStorage.getItem(key);
+  }
+
+  logOut(){
+    this.authService.doLogout();
   }
 }

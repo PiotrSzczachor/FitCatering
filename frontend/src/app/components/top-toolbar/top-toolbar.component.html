@@ -15,7 +15,10 @@
     <div class="right-section">
         <button class="social-media-button facebook-button"><i class="fa fa-facebook socials"></i></button>
         <button class="social-media-button ig-button"><i class="fa fa-instagram socials"></i></button>
-        <button class="basket-button" (click)="openShoppingCart()"><i class="fa fa-shopping-basket"></i>Order</button>
-        <div class="products-counter" [ngStyle]="{'visibility': checkOutService.productsNumber > 0 ? 'visible' : 'hidden'}">{{checkOutService.productsNumber}}</div>
+        <div class="basket-button-container">
+            <button class="basket-button" (click)="openShoppingCart()"><i class="fa fa-shopping-basket"></i>Order</button>
+            <div class="products-counter" [ngStyle]="{'visibility': checkOutService.productsNumber > 0 ? 'visible' : 'hidden'}">{{checkOutService.productsNumber}}</div>
+        </div>
+        <button class="logout-button" *ngIf="readLocalStorageValue('isAdmin')" (click)="logOut()">Log out</button>
     </div>
 </div>

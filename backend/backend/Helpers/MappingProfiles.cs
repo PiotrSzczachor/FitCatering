@@ -11,6 +11,8 @@ namespace backend.Helpers
             CreateMap<DishDTO, Dish>();
             CreateMap<DietDTO, Diet>();
             CreateMap<DiscountDTO, Discount>();
+            CreateMap<RegisterDTO, User>();
+            CreateMap<AddressDTO, Address>();
             CreateMap<UserRegisterDTO, User>();
         }
     }

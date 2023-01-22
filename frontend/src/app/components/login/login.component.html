@@ -4,7 +4,7 @@
         <p class="heading">Hello!</p>
         <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
             <input type="text" class="login-fields" placeholder="Login" formControlName="username">
-            <input type="text" class="login-fields" placeholder="Password" formControlName="password">
+            <input type="password" class="login-fields" placeholder="Password" formControlName="password">
         </form>
         <p class="error" [ngStyle]="{'visibility': authService.badPassword ? 'visible' : 'hidden'}">Bad e-mail or password</p>
         <p class="dont-have-acc">Do not have an Account?<span class="collored-words" (click)="signUpButtonClick()">Sign Up</span> now!</p>

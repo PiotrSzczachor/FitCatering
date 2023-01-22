@@ -15,5 +15,6 @@ namespace backend.Entities
         public DbSet<Comment> Comments { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Message> Messages { get; set; }
     }
 }

@@ -1,7 +1,4 @@
-﻿using backend.Entities;
-using Microsoft.Build.Framework;
-
-namespace backend.DTO
+﻿namespace backend.DTO
 {
     public class UserRegisterDTO
     {
@@ -9,6 +6,5 @@ namespace backend.DTO
         public string? Surname { get; set; }
         public string? Email { get; set; }
         public string? Password { get; set; }
-        public Address? Address { get; set; }
     }
 }

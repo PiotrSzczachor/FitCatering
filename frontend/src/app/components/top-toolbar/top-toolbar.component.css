@@ -74,7 +74,7 @@ button.social-media-button:hover{
 }
 
 
-button.basket-button{
+button.basket-button, button.logout-button{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -89,10 +89,14 @@ button.basket-button{
     font-family: "Sofia", sans-serif;
 }
 
-button.basket-button:hover{
+button.basket-button:hover, button.logout-button:hover{
     cursor: pointer;
     background-color: white;
     color: rgb(237, 138, 49);
+}
+
+button.logout-button{
+    margin-left: 1vh;
 }
 
 div.products-counter{
@@ -105,7 +109,11 @@ div.products-counter{
     display: flex;
     justify-content: center;
     align-items: center;
-    left: -20px;
-    bottom: -25px;
+    right: -80%;
+    bottom: 15px;
     font-size: 15px;
+}
+
+div.basket-button-container{
+    height: 50px;
 }
