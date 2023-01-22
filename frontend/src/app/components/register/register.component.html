@@ -2,14 +2,14 @@
 <div class="register-panel-content">
     <div class="register-form-container">
         <p class="heading">Hello!</p>
-        <form action="" class="register-form">
+        <form [formGroup]="registerForm" class="register-form">
             <input type="text" class="register-fields" placeholder="Name">
             <input type="text" class="register-fields" placeholder="Surname">
             <input type="text" class="register-fields" placeholder="E-mail">
             <input type="text" class="register-fields" placeholder="City">
             <input type="text" class="register-fields" placeholder="Postal code">
-            <input type="text" class="register-fields" placeholder="Address">
-            <input type="text" class="register-fields" placeholder="Phone number">
+            <input type="text" class="register-fields" placeholder="Street">
+            <input type="text" class="register-fields" placeholder="Number">
             <input type="password" class="register-fields" placeholder="Password">
             <input type="password" class="register-fields" placeholder="Repeat password">
         </form>

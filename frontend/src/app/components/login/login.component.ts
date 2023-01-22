@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   constructor(private router: Router,
-              private authService: AuthService) { }
+              public authService: AuthService) { }
 
   loginForm = new FormGroup({
     username: new FormControl(''),
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     this.loginForm.value
-    this.authService.login(this.loginForm.value)
+    this.authService.login(this.loginForm.value);
   }
 
 }

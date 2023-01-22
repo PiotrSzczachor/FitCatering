@@ -17,6 +17,7 @@ export class AuthService {
   endpoint: string = environment.apiUrl + "users";
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser = {};
+  badPassword: boolean = false;
   constructor(private http: HttpClient, public router: Router) {
 
   }
@@ -30,9 +31,15 @@ export class AuthService {
     return this.http
       .post<any>(`${this.endpoint}/login`, user)
       .subscribe((res: any) => {
-        localStorage.setItem('token', res.token);
-        this.currentUser = res;
-        this.router.navigate([""]);
+        if(res){
+          localStorage.setItem('token', res.token);
+          this.currentUser = res;
+          this.badPassword = false;
+          this.router.navigate([""]);
+        }
+          else{
+            this.badPassword = true;
+          }
       });
   }
   getToken() {
