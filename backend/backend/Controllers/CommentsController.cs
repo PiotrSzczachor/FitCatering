@@ -24,13 +24,13 @@ namespace backend.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<Comment?> GetDiet(int id)
+        public async Task<Comment?> GetComment(int id)
         {
             return await commentRepository.getCommentById(id);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Comment>> AddDiet([FromBody] Comment comment)
+        public async Task<ActionResult<Comment>> AddComment([FromBody] Comment comment)
         {
             return await commentRepository.addComment(comment);
         }
@@ -41,7 +41,7 @@ namespace backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Comment?>> DeleteDiet(int id)
+        public async Task<ActionResult<Comment?>> DeleteComment(int id)
         {
             return await commentRepository.deleteComment(id);
         }

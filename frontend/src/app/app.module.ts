@@ -38,6 +38,7 @@ import { MyInterceptorInterceptor } from './interceptors/my-interceptor.intercep
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { ClientPanelComponent } from './components/client-panel/client-panel.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ClientPanelComponent } from './components/client-panel/client-panel.com
     RegisterComponent,
     AdminPanelComponent,
     ClientPanelComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,

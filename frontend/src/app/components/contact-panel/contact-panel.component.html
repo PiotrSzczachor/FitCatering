@@ -6,13 +6,25 @@
     <div class="contact-info">
         <b><p class="heading">Do you have any <span class="collored-words">questions</span>?</p></b>
         <div class="form-container" id="contact-form">
-            <form action="" class="form-container">
-                <input type="text" class="input-fields first-field" placeholder="Name">
-                <input type="text" class="input-fields" placeholder="E-mail">
-                <input type="text" class="input-fields" placeholder="Phone number">
-                <textarea rows="4" cols="50" name="comment" form="contact-form" class="message" placeholder="Message"></textarea>
+            <form [formGroup]="messageForm" class="form-container">
+                <input type="text" class="input-fields first-field" placeholder="Name" formControlName="name">
+                <mat-error *ngIf="messageForm.controls['name'].touched && messageForm.controls['name'].hasError('required')">
+                    Please enter your name
+                </mat-error>
+                <input type="text" class="input-fields" placeholder="E-mail" formControlName="email">
+                <mat-error *ngIf="messageForm.controls['email'].touched && messageForm.controls['email'].hasError('required')">
+                    Please enter your email
+                </mat-error>
+                <input type="text" class="input-fields" placeholder="Phone number" formControlName="phoneNumber">
+                <mat-error *ngIf="messageForm.controls['phoneNumber'].touched && messageForm.controls['phoneNumber'].hasError('required')">
+                    Please enter your phone number
+                </mat-error>
+                <textarea rows="4" cols="50" name="comment" form="contact-form" class="message" placeholder="Message" formControlName="content"></textarea>
+                <mat-error *ngIf="messageForm.controls['content'].touched && messageForm.controls['content'].hasError('required')">
+                    Please enter your message
+                </mat-error>
             </form>
-            <button class="send-button">Send</button>
+            <button class="send-button" (click)="send()">Send</button>
         </div>
     </div>
 </div>

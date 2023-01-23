@@ -49,6 +49,7 @@ builder.Services.AddScoped<IDietsRepository, DietsRepository>();
 builder.Services.AddScoped<IDiscountsRepository, DiscountsRepository>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<ICommentsRepository, CommentsRepository>();
+builder.Services.AddScoped<IMessagesRepository, MessagesRepository>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddAuthentication(opt => {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

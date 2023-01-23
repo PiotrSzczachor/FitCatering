@@ -1,0 +1,12 @@
+div.alert-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p.message{
+    color: black;
+    font-size: 150px;
+}
