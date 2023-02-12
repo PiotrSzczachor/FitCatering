@@ -63,6 +63,7 @@ import { AlertComponent } from './components/alert/alert.component';
     AdminPanelComponent,
     ClientPanelComponent,
     AlertComponent,
+    AddDishComponent
   ],
   imports: [
     BrowserModule,

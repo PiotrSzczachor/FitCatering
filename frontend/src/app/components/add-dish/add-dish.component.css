@@ -1,0 +1,28 @@
+form.add-dish-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div.add-dish-buttons-container{
+    display: flex;
+    justify-content: center;
+}
+
+button.add-dish-button{
+    background-color: rgb(237, 138, 49);
+    color: rgb(34, 34, 71);
+    font-size: 20px;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+    font-family: "Sofia", sans-serif;
+}
+
+button.add-dish-button:hover{
+    cursor: pointer;
+    background-color: rgb(34, 34, 71);
+    color: rgb(237, 138, 49);
+    transition: 0.7s;
+}

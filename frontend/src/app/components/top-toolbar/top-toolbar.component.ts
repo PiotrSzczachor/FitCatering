@@ -32,6 +32,7 @@ export class TopToolbarComponent implements OnInit {
   }
 
   dietsButtonClick(){
+    this.router.navigate(['home']);
     this.scroller.scrollToAnchor("diets-content");
   }
   

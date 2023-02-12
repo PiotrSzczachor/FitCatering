@@ -1,3 +1,34 @@
 <div class="add-dish-container">
-
+    <div class="add-dish-form-container">
+        <form [formGroup]="addDishForm" class="add-dish-form">
+            <input type="text" class="register-fields" placeholder="Name" formControlName="name">
+            <mat-error *ngIf="addDishForm.controls['name'].touched && addDishForm.controls['name'].hasError('required')">
+                Please enter dish name
+            </mat-error>
+            <input type="text" class="register-fields" placeholder="Cuisine" formControlName="cuisine">
+            <mat-error *ngIf="addDishForm.controls['cuisine'].touched && addDishForm.controls['cuisine'].hasError('required')">
+                Please enter dish cuisine
+            </mat-error>
+            <input type="text" class="register-fields" placeholder="Type" formControlName="type">
+            <mat-error *ngIf="addDishForm.controls['type'].touched && addDishForm.controls['type'].hasError('required')">
+                Please enter dish type
+            </mat-error>
+            <input type="text" class="register-fields" placeholder="Price" formControlName="price">
+            <mat-error *ngIf="addDishForm.controls['price'].touched && addDishForm.controls['price'].hasError('required')">
+                Please enter dish price
+            </mat-error>
+            <div class="is-vege-checkbox-container">
+                <input id="is-vege-checkbox" type="checkbox" class="register-fields" formControlName="isVege">
+                <label for="is-vege-checkbox">Is vege?</label>
+            </div>
+            <input type="text" class="register-fields" placeholder="Stock" formControlName="stock">
+            <mat-error *ngIf="addDishForm.controls['stock'].touched && addDishForm.controls['stock'].hasError('required')">
+                Please enter dish stock
+            </mat-error>
+        </form>
+    </div>
+    <div class="add-dish-buttons-container">
+        <button class="add-dish-button"  (click)="closeDialog()">Cancel</button>
+        <button class="add-dish-button">Add</button>
+    </div>
 </div>

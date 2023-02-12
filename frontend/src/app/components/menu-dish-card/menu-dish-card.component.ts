@@ -11,6 +11,7 @@ export class MenuDishCardComponent implements OnInit {
   constructor(private checkOutService: CheckOutService) { }
 
   ngOnInit(): void {
+    this.initDishCounter();
   }
 
   @Input() imgUrl: string | undefined;
@@ -45,6 +46,15 @@ export class MenuDishCardComponent implements OnInit {
       }
       this.checkOutService.removeProductsFromProductsList(dishDTO);
     }
+  }
+
+  initDishCounter(){
+    const productsFromBasket = this.checkOutService.getProductsList();
+    productsFromBasket.forEach(product => {
+      if(product.name == this.name){
+        this.dishesAddedCounter = product.quantity;
+      }
+    })
   }
 
 }
