@@ -39,6 +39,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { ClientPanelComponent } from './components/client-panel/client-panel.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { AlertComponent } from './components/alert/alert.component';
     LeafletModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FileUploadModule
   ],
   providers: [
     {

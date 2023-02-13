@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/Http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { FileUploader } from 'ng2-file-upload';
 
 @Component({
   selector: 'app-add-dish',
@@ -17,6 +18,10 @@ export class AddDishComponent implements OnInit {
   ngOnInit(): void { 
   }
 
+  uploader!: FileUploader;
+  hasBaseDropZoneOver:boolean | undefined;
+  hasAnotherDropZoneOver:boolean | undefined;
+
   addDishForm = this.formBuilder.group({
     name: new FormControl('', Validators.required),
     cuisine: new FormControl('', Validators.required),
@@ -28,7 +33,10 @@ export class AddDishComponent implements OnInit {
 
   closeDialog(){
     this.dialog.closeAll();
-    console.log("TEST");
+  }
+
+  public fileOverBase(e:any):void {
+    this.hasBaseDropZoneOver = e;
   }
 
 }
