@@ -2,13 +2,9 @@ import { Injectable } from '@angular/core';
 import { IUser } from '../Interfaces/IUser';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import {
-  HttpClient,
-  HttpHeaders,
-  HttpErrorResponse,
-} from '@angular/common/Http';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',

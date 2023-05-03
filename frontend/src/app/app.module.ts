@@ -13,16 +13,15 @@ import { SwiperModule } from 'swiper/angular';
 import { MenuSectionComponent } from './components/menu-section/menu-section.component';
 import { MenuDishCardComponent } from './components/menu-dish-card/menu-dish-card.component';
 import { ShoppingCartPanelComponent } from './components/shopping-cart-panel/shopping-cart-panel.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table' ;
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/Http';
 import { DietViewerComponent } from './components/diet-viewer/diet-viewer.component';
 import { MenuViewerComponent } from './components/menu-viewer/menu-viewer.component';
 import { MatIconModule } from '@angular/material/icon';
 import { CommentsPanelComponent } from './components/comments-panel/comments-panel.component';
 import { MenuPanelComponent } from './components/menu-panel/menu-panel.component' ;
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { MapComponent } from './components/map/map.component';
@@ -31,15 +30,16 @@ import { ShippingPanelComponent } from './components/shipping-panel/shipping-pan
 import { ContactPanelComponent } from './components/contact-panel/contact-panel.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component'
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AddDishComponent } from './components/add-dish/add-dish.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyInterceptorInterceptor } from './interceptors/my-interceptor.interceptor';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { ClientPanelComponent } from './components/client-panel/client-panel.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [

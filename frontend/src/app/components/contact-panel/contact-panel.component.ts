@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/Http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, ValidatorFn, AbstractControl, ValidationErrors, FormBuilder, Form } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { environment } from 'src/environments/environment';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { AlertComponent } from '../alert/alert.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-panel',

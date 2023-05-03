@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/Http';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { IDiscount } from 'src/app/Interfaces/IDiscount';
 import { CheckOutService } from 'src/app/services/check-out.service';

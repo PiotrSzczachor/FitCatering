@@ -2,9 +2,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { SwiperModule } from 'swiper/angular';
 import { SwiperComponent } from "swiper/angular";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
-import { HttpClient } from '@angular/common/Http';
 import { environment } from 'src/environments/environment';
 import { IDiet } from 'src/app/Interfaces/IDiet';
+import { HttpClient } from '@angular/common/http';
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 @Component({

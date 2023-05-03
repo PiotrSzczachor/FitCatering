@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { HttpClient } from '@angular/common/Http';
 import { environment } from '../../../environments/environment'
 import { IDish } from 'src/app/Interfaces/IDish';
 import SwiperCore, { EffectCoverflow, Navigation, Pagination, Autoplay } from 'swiper';
+import { HttpClient } from '@angular/common/http';
 SwiperCore.use([EffectCoverflow, Pagination, Navigation, Autoplay]);
 
 

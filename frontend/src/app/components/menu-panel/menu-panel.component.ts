@@ -1,5 +1,4 @@
 import { Options } from '@angular-slider/ngx-slider';
-import { HttpClient } from '@angular/common/Http';
 import { Component, NgModule, OnInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { Observable } from 'rxjs';
@@ -11,6 +10,7 @@ import { switchMap, take } from 'rxjs/operators';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { AddDishComponent } from '../add-dish/add-dish.component';
 import { AuthService } from 'src/app/services/auth.service';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
