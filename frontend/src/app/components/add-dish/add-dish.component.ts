@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,7 +13,8 @@ export class AddDishComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder,
-              private dialog: MatDialog) { }
+              private dialog: MatDialog,
+              private http: HttpClient) { }
 
   ngOnInit(): void { 
   }
@@ -26,7 +28,7 @@ export class AddDishComponent implements OnInit {
     cuisine: new FormControl('', Validators.required),
     type: new FormControl('', Validators.required),
     price: new FormControl('', Validators.required),
-    isVege: new FormControl('', Validators.required),
+    isVege: new FormControl(false, Validators.required),
     stock: new FormControl('', Validators.required)
   })
 
@@ -36,6 +38,12 @@ export class AddDishComponent implements OnInit {
 
   public fileOverBase(e:any):void {
     this.hasBaseDropZoneOver = e;
+  }
+
+  addDish(){
+    if(this.addDishForm.valid){
+      console.log(this.addDishForm.value);
+    }
   }
 
 }

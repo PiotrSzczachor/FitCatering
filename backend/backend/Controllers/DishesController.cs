@@ -23,7 +23,7 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<IEnumerable<Dish>> GetDishes()
         {
-            return await IdishesRepository.getDishes();
+             return await IdishesRepository.getDishes();
         }
         [HttpGet("Pagin")]
         public async Task<PagedList<Dish>> GetDishesPagin([FromQuery] PaginParameters paginParameters)
